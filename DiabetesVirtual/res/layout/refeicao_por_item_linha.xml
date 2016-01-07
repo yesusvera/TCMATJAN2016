@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:id="@+id/historico_cor_item"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:background="@color/gelo">	    
+<!-- SEPARADOR -->
+    <LinearLayout android:id="@+id/ref_item_separador"
+	        android:layout_width="fill_parent"
+	       	android:layout_height="wrap_content"
+			android:gravity="center"
+			android:orientation="vertical"
+			android:background="@color/azul_escuro2"
+			android:paddingRight="5dp">	
+			<TextView android:id="@+id/ref_item_sepadaror_text"
+			    android:layout_height="wrap_content"
+			    android:layout_width="fill_parent"
+			    android:textSize="14sp"
+			    android:textColor="#fff"
+			    android:textStyle="bold"
+			    android:gravity="right"
+			    android:layout_margin="5dp"/>     
+	</LinearLayout>
+   
+   
+	<TableLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	   	android:padding="5dp"
+	    android:stretchColumns="0,1"
+	    android:shrinkColumns="0,1">	    
+<!-- DESCRUCAO DO ITEM -->
+	    <TableRow android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center">
+		    <TextView android:id="@+id/ref_item_desc"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:textSize="18sp"
+		        android:textColor="@color/laranja"
+		        android:gravity="center"
+		        android:layout_span="2"/>		
+		</TableRow>
+<!-- MEDIDA E QTD DE MEDIDA -->		
+		<TableRow android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="left"
+	       	android:paddingLeft="5dp">
+		    <TextView android:id="@+id/ref_item_medida"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="14sp"
+		        android:textColor="@color/azul_escuro1"/>
+		    <TextView android:id="@+id/ref_item_medida_qtd"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="14sp"
+		        android:textColor="@color/azul_escuro1"/>		    
+		</TableRow>
+<!-- CARB POR MEDIDA -->		
+		<TableRow android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="left"
+	        android:paddingLeft="5dp">
+		    <TextView android:text="@string/carbMEdida"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="14sp"
+		        android:textColor="@color/azul_escuro1"/>
+		    <TextView android:id="@+id/ref_item_carb_qtd"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="14sp"
+		        android:textColor="@color/azul_escuro1"/>		    
+		</TableRow>
+<!-- CARB POR TOTAL DO ITEM -->		
+		<TableRow android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="left"
+	        android:paddingLeft="5dp">
+		    <TextView android:text="@string/carbMEdidaTotal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="14sp"
+		        android:textColor="@color/azul_escuro1"/>
+		    <TextView android:id="@+id/ref_item_carb_qtd_total"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="14sp"
+		        android:textColor="@color/azul_escuro1"/>		    
+		</TableRow>
+	</TableLayout>
+	<View android:layout_width="fill_parent" android:layout_height="0.5dp"
+	        android:background="#000"/>
+</LinearLayout>

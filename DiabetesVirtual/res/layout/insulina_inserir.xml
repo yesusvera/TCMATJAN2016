@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/azul_fundo"
+    android:orientation="vertical">
+	<LinearLayout android:layout_width="fill_parent" 
+	    android:layout_height="40dp" 
+	    android:background="@drawable/topo">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/titulo_insulina"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout>     
+    
+	<ScrollView android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_gravity="center"
+	    android:background="@color/cinza_claro">	    
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">		    
+		    <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="90dp"
+		        android:padding="5dp"
+		        android:background="@color/azul_fundo"
+		        android:orientation="horizontal">        
+		        <EditText android:id="@+id/insulina"
+			 	    	android:layout_width="0dp"
+			 	    	android:layout_weight="1"
+				    	android:layout_height="fill_parent"
+				        android:background="@drawable/editext" 
+				        android:inputType="numberDecimal" 
+				        style="@style/fonte_editText" 
+				        android:hint="@string/hint_medida_insulina"
+				        android:gravity="center" 
+				        android:ellipsize="start"
+				        android:layout_margin="5dp"/>    		   		    
+				<EditText android:id="@id/obs"
+				    android:singleLine="false"
+				    style="@style/fonte_editText"
+				    android:layout_height="fill_parent"
+				    android:layout_width="0dp"
+				    android:layout_weight="1"
+				    android:layout_margin="5dp"
+				    android:background="@drawable/editext"
+				    android:gravity="center"
+				    android:hint="@string/hint_Obs"
+				    android:inputType="textMultiLine" 
+				    android:ellipsize="start"/>
+		    </LinearLayout>
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    <RadioGroup android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:gravity="center"
+		        android:background="@color/cinza_claro">  
+			    <RadioButton android:id="@+id/lenta"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"/>
+			    <RadioButton android:id="@+id/rapida"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:checked="true"/>
+	    	</RadioGroup>		    
+		   
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    <TextView android:id="@id/tipo_glicemia"
+			    android:text="@string/dia" 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:background="#fff"
+			    style="@style/fonte_dataHora"/>		    
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    
+		    <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="5dp"
+		        android:gravity="center"
+		        android:background="@color/gelo">
+		        <DatePicker android:id="@id/data_picker" 
+				        android:layout_width="wrap_content" 
+				        android:layout_height="wrap_content"/>  	         
+		    </LinearLayout>
+		    
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    <TextView android:id="@+id/hora_selecionada" 
+			    android:text="@string/hora" 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    style="@style/fonte_dataHora"
+			    android:background="#fff"/>	    
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    
+		    <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:padding="5dp"
+		        android:orientation="horizontal"
+		        android:background="@color/gelo">
+		        <TimePicker android:id="@+id/time_picker" 
+					    android:layout_width="0dp" 
+					    android:layout_height="wrap_content"
+					    android:layout_weight="1"/>
+		        <LinearLayout android:layout_width="0dp" 
+		            android:layout_weight="1"
+				    android:layout_height="fill_parent"
+				    android:background="@drawable/fundo_branco_arredondado"
+				    android:layout_margin="5dp"
+				    android:padding="10dp">
+					<Button style="@style/tema_botao_inserir" 
+					    android:text="@string/b_salvar"
+					    android:layout_height="fill_parent"
+					    android:layout_width="fill_parent"
+					    android:onClick="salvar"/>	
+				</LinearLayout>  	
+		    </LinearLayout>
+		    
+<!-- INFO INSULINA -->	
+			<View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		 	<LinearLayout android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        android:padding="5dp"
+				        android:orientation="vertical"
+				        android:layout_marginBottom="5dp">
+					    <TextView android:text="@string/atencao"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:textSize="14sp"
+							android:textColor="#FF0000"
+							android:textStyle="bold"
+							android:gravity="center"
+							android:layout_marginTop="5dp"/>
+					    <TextView android:text="@string/insulina_obs"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"
+					        android:textColor="#000"
+					        android:textSize="14sp"
+					        android:gravity="center"
+					        android:layout_marginBottom="10dp"/>
+			</LinearLayout>	
+			
+<!-- BOTOES LEMBRETES -->			
+		 	<LinearLayout android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:background="@drawable/botao"
+				android:orientation="horizontal">	
+				<Button android:onClick="lembrete_basal"
+				    style="@style/tema_botao" 
+				    android:text="@string/b_lembrete"
+				    android:layout_height="50dp"
+				    android:layout_width="fill_parent"/>	  	    
+		</LinearLayout>
+	  </LinearLayout>  
+	</ScrollView>
+
+
+
+</LinearLayout>

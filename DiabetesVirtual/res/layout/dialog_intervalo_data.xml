@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/gelo"
+    android:layout_margin="1dp"
+    android:orientation="vertical" >
+
+	<TextView android:text="@string/text_data_1"
+	    android:background="#fff"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		style="@style/fonte_dataHora"/>
+	<View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000" android:layout_marginBottom="5dp"/>
+	
+	<DatePicker android:id="@+id/data1" 
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"/>
+	
+	<View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000" android:layout_marginTop="5dp"/>
+		<TextView android:text="@string/text_data_2"
+		    android:background="#fff"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			style="@style/fonte_dataHora"/>
+	<View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000" android:layout_marginBottom="5dp"/>
+	
+	<DatePicker  android:id="@+id/data2" 
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"/>
+    
+    
+	<LinearLayout android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:background="@drawable/botao"
+		android:orientation="horizontal"
+		android:layout_marginTop="5dp">
+		<Button android:id="@+id/b_cancel2"
+		    style="@style/tema_botao" 
+		    android:text="@string/b_cancelar"
+		    android:layout_height="50dp"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"/>	
+		<View android:layout_width="0.6dp" 
+	            android:layout_height="fill_parent" 
+	            android:layout_marginTop="5dp"
+			    android:layout_marginBottom="5dp" 
+			    android:background="@color/cinza_claro"/>
+		<Button android:id="@+id/b_ok2"
+		    style="@style/tema_botao" 
+		    android:text="@string/b_confirmar"
+		    android:layout_height="50dp"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"/>	
+	</LinearLayout>
+    
+</LinearLayout>

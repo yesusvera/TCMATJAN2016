@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gelo">    
+    <LinearLayout android:id="@id/topo1"
+        android:layout_width="fill_parent" 
+        android:layout_height="40dp" 
+	    android:background="@drawable/topo"
+	    android:layout_alignParentTop="true">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/tirulo_glicemia_variacao"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout>     
+    <LinearLayout android:id="@id/topo2"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/fundo"
+        android:padding="5dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginRight="-2dp"
+        android:layout_below="@id/topo1">        
+		<EditText android:id="@+id/glic_inicial" 
+		   	android:layout_width="0dp"
+		   	android:layout_weight="1"
+		  	android:layout_height="fill_parent"
+		    android:background="@drawable/editext" 
+		    android:inputType="number" 
+		    style="@style/fonte_editText" 
+		    android:hint="@string/hint_inicio"
+		    android:gravity="center" 
+		    android:ellipsize="start"
+		    android:layout_margin="5dp"/>    
+		   <requestFocus />			    
+		<EditText android:id="@+id/glic_final"
+			style="@style/fonte_editText"
+			android:layout_height="fill_parent"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_margin="5dp"
+			android:background="@drawable/editext"
+			android:gravity="center"
+			android:hint="@string/hint_fim"
+			android:inputType="number" 
+			android:ellipsize="start">
+		</EditText>	    
+    </LinearLayout>   
+
+<!-- TILUTO DA LISTA  
+   <LinearLayout android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_below="@id/topo2">        
+        <TextView android:text="@string/dia" 
+            style="@style/fonte_relatorio_glicemia"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="#0000CD"/>        
+        <TextView android:text="@string/hora" 
+            style="@style/fonte_relatorio_glicemia"
+            android:layout_height="fill_parent"
+			android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_margin="1dp"
+            android:background="#0000CD"/>        
+        <TextView android:text="@string/glicemia" 
+            style="@style/fonte_relatorio_glicemia"
+         	android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="#0000CD"/>             
+        <TextView android:text="@string/obs" 
+            style="@style/fonte_relatorio_glicemia"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="1dp"
+           	android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="#0000CD"/>        
+    </LinearLayout>
+ -->   
+ <!-- LISTA -->   
+    <LinearLayout android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:background="#fff"
+	       android:layout_below="@id/topo2"
+	       android:layout_above="@id/bottom">
+		<ListView android:id="@id/glicemia_lista"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content">	    
+		</ListView>
+	</LinearLayout>
+    
+    <!-- BOTOES -->
+    <LinearLayout android:id="@id/bottom" 
+         android:background="@drawable/botao"
+         android:orientation="horizontal"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true">            
+         <Button android:text="@string/b_voltar"
+            android:layout_height="40dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/tema_botao"
+            android:onClick="voltar"/>  
+         <View android:layout_width="0.6dp" 
+            android:layout_height="fill_parent" 
+            android:layout_marginTop="5dp"
+		    android:layout_marginBottom="5dp" 
+		    android:background="@color/cinza_claro"/>	          
+         <Button android:text="@string/b_pesquisar"
+            android:layout_height="40dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/tema_botao"
+            android:onClick="pesquisar"/>
+    </LinearLayout>	 
+    
+</RelativeLayout>

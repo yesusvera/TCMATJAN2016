@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Doce Desafio</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tirulo_glicemia">Glicemia</string>
+    <string name="tirulo_glicemia_variacao">Glicemia - Variação glicêmica</string>
+    <string name="titulo_glicemia_data_hora">Glicemia - Data-hora</string>
+    <string name="titulo_insulina_data_hora">Insulina - Data-hora</string>
+    <string name="titulo_refeicao_data_hora">Refeição - Data-hora</string>
+    <string name="titulo_insulina">Insulina</string>
+    <string name="titulo_insulina_tipo">Insulina - Tipo</string>
+    <string name="titulo_refeicao">Refeição</string>
+    <string name="titulo_relatorios">Relatórios</string>
+    <string name="titulo_refeicao_relatorio">Refeição - Relatório Geral</string>
+    <string name="titulo_refeicao_detalhes">Refeição - Detalhes</string>
+    <string name="titulo_refeicao_variacao">Refeição - Variação (carboidrato)</string>
+    <string name="titulo_exercicio_tipo">Exercícios - Tipo</string>
+    <string name="text_hora_1">Informe a hora incial</string>
+    <string name="text_hora_2">Informe a hora final</string>
+    <string name="text_data_1">Informe a data inicial</string>
+    <string name="text_data_2">Informe a data final</string>
+    <string name="basal">Basal</string>
+    <string name="ultra_rapida">Ultra-rápida</string>
+    <string name="dia">DIA</string>
+    <string name="data_down">Data</string>
+    <string name="peso_total_down">Peso total</string>
+    <string name="carb_total_down">Carb. total</string>
+    <string name="observacao">Observação</string>
+    <string name="hora">HORA</string>
+    <string name="hora_dow">Hora</string>
+    <string name="data_hora">DATA-HORA</string>
+    <string name="glicemia">GLICEMIA</string>
+    <string name="insulina_up">INSULINA</string>
+    <string name="insulina_down">Insulina</string>
+    <string name="ref_up">REFEIÇÃO</string>
+    <string name="ref_down">Refeição</string>
+    <string name="quantidade">QUANTIDADE</string>
+    <string name="qtd_medidas">Quantidade</string>
+    <string name="obs">OBS.</string>
+    <string name="tipo">TIPO</string>
+    <string name="qtd">QTD.</string>
+    <string name="qtd_down">Qtd.</string>
+    <string name="total_carb">Total de carboidrato</string>
+    <string name="descricao">Descrição</string>
+    <string name="b_tabela">Tabela</string>
+    <string name="b_refeicao">Refeição</string>
+    <string name="b_glicemia">Glicemia</string>
+    <string name="b_insulina">Insulina</string>
+    <string name="b_perfil">Perfil</string>
+    <string name="b_lembrete">Lembretes</string>
+    <string name="b_inserir">INSERIR</string>
+    <string name="b_salvar">Salvar</string>
+    <string name="b_relatorio">Geral</string>
+    <string name="b_relatorios">Relatórios</string>
+    <string name="b_pesquisar">Pesquisar</string>
+    <string name="b_voltar">Voltar</string>
+    <string name="b_sair">Sair</string>
+    <string name="b_data">Data</string>
+    <string name="b_hora">Hora</string>
+    <string name="b_confirmar">Confirmar</string>
+    <string name="b_cancelar">Cancelar</string>
+    <string name="b_intervalo">Variação</string>
+    <string name="b_data_hora">Data-Hora</string>
+    <string name="b_insulina_por_tipo">Tipo</string>
+    <string name="b_grafico">Gráfico</string>
+    <string name="b_adicionar">Adicionar</string>
+    <string name="b_avancar">Avançar</string>
+    <string name="b_fechar">Fechar</string>
+    <string name="text_glicemia">Informe a glicemia medida</string>
+    <string name="text_glicemia_obs">Observações da medida\n(Opcional)</string>
+    <string name="hint_toque_aqui">Selecione</string>
+    <string name="hint_Obs">Observações</string>
+    <string name="hint_medida_glicemia">Glicemia</string>
+    <string name="hint_medida_insulina">Unidades</string>
+    <string name="hint_pesquisar">Pesquisar</string>
+    <string name="hint_inicio">Inicial</string>
+    <string name="hint_fim">Final</string>
+    <string name="medida">Medida</string>
+    <string name="todos">Todos</string>
+    <string name="peso">Peso</string>
+    <string name="carboidrato">Carboidrato</string>
+    <string name="relatorio_geral">Relatório Geral</string>
+    <string name="carboidrato_up">CARBOIDRATO</string>
+    <string name="peso_up">PESO</string>
+    <string name="carb">Carb. p/medida</string>
+    <string name="gerar_pdf">Gerar PDF</string>
+    <string name="sugestao_insulina">Usar sugestão de insulina</string>
+    
+
+    <!-- JAIR ESTÁ TRADUZINDO DAQUI PARA CIMA - INSERIR APENAS ABAIXO DESSE COMENTÁRIO -->
+
+    <string name="titulo_perfil">Perfil</string>
+    <string name="altura_down">Altura</string>
+    <string name="data_nasc_down">Data de Nasc.</string>
+    <string name="perfil_hint_data">dd/mm/yyyy</string>
+    <string name="perfil_cm">cm</string>
+    <string name="perfil_kg">kg</string>
+    <string name="perfil_sexo">Sexo</string>
+    <string name="perfil_idade">Idade</string>
+    <string name="tipo_down">Tipo</string>
+    <string name="ref_cafe">Café</string>
+    <string name="ref_almoco">Almoço</string>
+    <string name="ref_janta">Jantar</string>
+    <string name="ref_lanche">Lanche</string>
+    <string name="msg_add_sucesso">Dados inseridos com sucesso.</string>
+    <string name="msg_atz_sucesso">Dados atualizados com sucesso.</string>
+    <string name="b_metas">Metas</string>
+    <string name="titulo_metas">Metas</string>
+    <string name="titulo_metas_atingidas">Metas atingidas</string>
+    <string name="metas_g_inicial">Glicemia (Min)</string>
+    <string name="metas_g_final">Glicemia (Máx)</string>
+    <string name="metas_i_inicial">Insulina (Min)</string>
+    <string name="metas_i_final">Insulina (Máx)</string>
+    <string name="metas_c_inicial">Refeição (Min)</string>
+    <string name="metas_c_final">Refeição (Máx)</string>
+    <string name="metas_gramas">Gramas</string>
+    <string name="metas_unidades">Unidades</string>
+    <string name="metas_mg_dl">Mg/dL</string>
+    <string name="metas_info_titulo">O que são as Metas?</string>
+    <string name="metaGeral">Geral</string>
+    <string name="metaMensal">Mensal</string>
+    <string name="metaSemanal">Semanal</string>
+    <string name="metaDiaria">Diária</string>
+    <string name="metas_glicemica">Glicemia</string>
+    <string name="metas_insulina">Insulina</string>
+    <string name="metas_carb">Refeição</string>
+    <string name="ultimos_dados">Últimos dados</string>
+    <string name="ultima_glicemica">Glicemia</string>
+    <string name="ultima_insulina">Insulina</string>
+    <string name="ultimo_carb">Refeição</string>
+    <string name="main_info_insulina">(Ultra-rápida)</string>
+    <string name="main_info_ref">(Carboidrato)</string>
+    <string name="metas_obs">As metas são uma boa maneira de verificar o quanto você obtém sucesso nos seus objetivos. Elas podem ser alteradas a qualquer instante, atualizando seu percentual de sucesso instantaneamente.\n\nObs.: As metas da insulina devem ser feitas levando em consideração apenas o tipo Ultra-rápida. Da mesma forma, as metas da refeição devem ser feitas considerando a quantidade total de carboidratos de cada refeição.</string>
+    <string name="titulo_exercicios">Atividades físicas</string>
+    <string name="b_exercicios">Ativ. física</string>
+    <string name="exercicios_desc_hint">Descrição</string>
+    <string name="exercicios_duracao_hint">Duração (min.)</string>
+    <string name="exercicio_aerobico">Aeróbico</string>
+    <string name="exercicio_anaerobico">Anaeróbico</string>
+    <string name="exercicio_muito_leve">Muito Leve</string>
+    <string name="exercicio_leve">Leve</string>
+    <string name="exercicio_moderado">Moderado</string>
+    <string name="exercicio_intenso">Intenso</string>
+    <string name="exercicio_muito_intenso">Muito Intenso</string>
+    <string name="exercicio_muito_leve2">1</string>
+    <string name="exercicio_leve2">2</string>
+    <string name="exercicio_moderado2">3</string>
+    <string name="exercicio_intenso2">4</string>
+    <string name="exercicio_muito_intenso2">5</string>
+    <string name="exercicio_tipo">Tipo</string>
+    <string name="exercicio_tipo_up">TIPO</string>
+    <string name="exercicio_intensidade">Intensidade</string>
+    <string name="exercicio_intensidade_up">INTENSIDADE</string>
+    <string name="titulo_exercicios_up">ATIVIDADES FÍSICAS</string>
+    <string name="exercicio_duracao_up">DURAÇÃO</string>
+    <string name="exercicio_desc_up">DESCRIÇÃO</string>
+    <string name="b_ok">OK</string>
+    <string name="titulo_historico">HISTÓRICO</string>
+    <string name="b_historico">Histórico</string>
+    <string name="titulo_historico_tipo">HISTÓRICO AVANÇADO</string>
+    <string name="b_historico_tipo">Avançado</string>
+    <string name="radio_glic">Glicemia</string>
+    <string name="radio_ref">Refeição</string>
+    <string name="radio_exe">Ativ.física</string>
+    <string name="radio_insulina">Insulina</string>
+    <string name="b_gerar_hist">Gerar</string>
+    <string name="titulo_tabela">Tabela de Alimentos</string>
+    <string name="informacao_down">Informação</string>
+    <string name="informacao_up">INFORMAÇÂO</string>
+    <string name="qtd_insulina_down">Quantidade</string>
+    <string name="fator_glic">Sensibilidade\nGlicemia</string>
+    <string name="fator_carb">Sensibilidade\nCarboidrato</string>
+    <string name="fator_glic_titulo">Sensibilidade Glicemia</string>
+    <string name="fator_carb_titulo">Sensibilidade Carboidrato</string>
+    <string name="fator_glic_info">Significa quantos mg/dL serão reduzidos com 1U de insulina para esta pessoa.</string>
+    <string name="fator_carb_info">Representa quantos gramas de carboidrato são cobertos por 1U de Insulina.</string>
+    <string name="fator_info_atencao">Os valores SUGERIDOS têm como base as "Diretrizes" da SBD (Sociedade Brasileira de Diabetes) e o manual "Aspectos práticos da insulina  - um manual para prescritores" da ADA (American Diabetes Association), levando em consideração o total de insulina indicado para uso diário que é inicialmente encontrado a partir do peso do paciente multiplicado por um fator que representa sua atual categoria. Tendo ciência do total de insulina diária é possível encontrar o fator de sensibilidade em relação a glicemia, que é tido por 1800/total de insulina diária, e o fator de sensibilidade em relação ao carboidrato, que é tido por 500/total de insulina diária. Vale ressaltar que são apenas sugestões de valores e que os mesmos devem ser ajustados cuidadosamente devendo o paciente discutir com a equipe de saúde que o acompanha para ajustes adequados. As informações podem ser modificadas a qualquer instante para se adequar as necessidades reais do paciente.</string>
+    <string name="atencao">ATENÇÃO</string>
+    <string name="b_calcular_default">Usar valor sugerido</string>
+    <string name="fator_cat">Em qual categoria você se encaixa?</string>
+    <string name="fator_cat_1">Atleta condicionado.</string>
+    <string name="fator_cat_2">Esportista motivado.\nMulher na 1ª fase menstrual.</string>
+    <string name="fator_cat_3">Adulto discretamente afetado por virose.\nCriança no inicio da puberdade.\nMulher na última semana do ciclo menstrual.\nMulher no 1º trimestre da gravidez.</string>
+    <string name="fator_cat_4">Adulto com infecção viral grave ou localizada.\nCriança no meio da puberdade.\nMulher no 2º trimestre da gravidez.</string>
+    <string name="fator_cat_5">Mulher no 3º trimestre da gravidez.\nAdulto com infecção bacteriana.</string>
+    <string name="fator_cat_6">Mulher no fim da gravidez.\nCriança no fim da puberdade.\nAdulto comprometido ou com infecção bacteriana grave.</string>
+    <string name="fator_dialog_glic">A sugestão de insulina será feita baseando-se na última glicemia informada ao aplicativo. Caso esta medida reflita a situação atual clique em USAR, caso contrário clique em NOVA e insira a medida da glicemia atual.</string>
+    <string name="b_inserir_dow">Inserir</string>
+    <string name="insulina_sugestao">Usar sugestão de insulina.</string>
+    <string name="insulina_sugestao_obs">Será necessário informar a glicemia atual.</string>
+    <string name="ultima_glic_1">A ultima medida de glicemia que consta no banco de dados é de:</string>
+    <string name="ultima_glic_2">Informada em:</string>
+    <string name="b_nova">Nova</string>
+    <string name="b_usar">Usar</string>
+    <string name="b_recalcular">Recalcular</string>
+    <string name="tipo_ref">Selecione o tipo</string>
+    <string name="lem_2min">Lembrar em 2 Minutos</string>
+    <string name="lem_5min">Lembrar em 5 Minutos</string>
+    <string name="lem_10min">Lembrar em 10 Minutos</string>
+    <string name="lem_15min">Lembrar em 15 Minutos</string>
+    <string name="lem_30min">Lembrar em 30 Minutos</string>
+    <string name="lem_45min">Lembrar em 45 Minutos</string>
+    <string name="lem_1hora">Lembrar em 1 hora</string>
+    <string name="lembrete_obs">Ao definir um lembrete a quantidade de insulina sugerida pelo aplicativo ou alterada por você não será salva imediatamente nos registros, uma alarme irá tocar para lembrar de aplicar a insulina e informar a mesma ao aplicativo.</string>
+    <string name="sug_insulina_info1">Qual a meta glicemia que você deseja atingir após a corrreção?</string>
+    <string name="sug_insulina_info2">A medida da glicemia atual é de:</string>
+    <string name="sug_insulina_info3">A quantidade de carboidrato utilizada para calcular a correção foi de:</string>
+    <string name="sug_insulina_info4">Seu fator de sensibilidade glicêmica é:</string>
+    <string name="sug_insulina_info5">Seu fator de sensibilidade ao carboidrato é:</string>
+    <string name="sug_insulina_info6">O calculo foi feito levando em consideração os dados informados acima. Você pode alterar a quantidade de insulina utilizada para a correção, caso não concorde com a sugestão. A meta glicêmica também pode ser alterara, informe no primeiro campo a sua meta e clique no botão RECALCULAR. Caso você aplique a insulina antes da refeição clique no botão INSERIR, para salvar os dados da insulina. Caso queira inserir um lembrete para aplicar a insulina após a refeição clique no botão LEMBRETE.</string>
+    <string name="sug_insulina_info_qtd">A quantidade de insulina ULTRA-RÁPIDA sugerida para alcançar a meta glicêmia acima é de:</string>
+    <string name="ref_obs">Você pode editar ou excluir uma refeição a qualquer instante. Na tela inicial, clique no botão RELATÓRIOS, procure pelo título REFEIÇÃO e clique no botão GERAL. Uma lista com todas as refeições salvas será exibida, basta clicar sobre a qual deseja editar ou excluir. </string>
+    <string name="glic_obs">Você pode editar ou excluir uma glicemia a qualquer instante. Na tela inicial, clique no botão RELATÓRIOS, procure pelo título GLICEMIA e clique no botão GERAL. Uma lista com todas as glicemias salvas será exibida, basta clicar sobre a qual deseja editar ou excluir. </string>
+    <string name="insulina_obs">Você pode editar ou excluir uma insulina a qualquer instante. Na tela inicial, clique no botão RELATÓRIOS, procure pelo título INSULINA e clique no botão GERAL. Uma lista com todas as insulinas salvas será exibida, basta clicar sobre a qual deseja editar ou excluir. </string>
+    <string name="tabela_geral">Geral</string>
+    <string name="tabela_favoritos">Favoritos</string>
+    <string name="lembrete1">Lembrete 01</string>
+    <string name="lembrete2">Lembrete 02</string>
+    <string name="b_editar">Editar</string>
+    <string name="b_excluir">Excluir</string>
+    <string name="b_ref_itens">Detalhes</string>
+    <string name="nome">Nome</string>
+    <string name="carbMEdida">Carboidrato por medida</string>
+    <string name="carbMEdidaTotal">Carboidrato total</string>
+    <string name="ativar">Ativar lembrete diário</string>
+    <string name="b_lembrete_basal">Lembrete Insulina Basal</string>
+    <string name="carb_down_gramas">Carboidrato(g)</string>
+    <string name="peso_down_gramas">Peso(g)</string>
+    <string name="fav_obs">Obs: Para adicionar ou remover um item dos seus favoritos, marque ou desmarque a opção acima.</string>
+    <string name="mediaArit">Média Aritmética</string>
+    <string name="desvioPadrao">Desvio Padrão</string>
+    <string name="totalDados">Tota de dados</string>
+    <string name="titulo_backup">SEGURANÇA</string>
+    <string name="b_backup">Back-up</string>
+    <string name="b_restaurar">Restaurar</string>
+    <string name="b_csv">Gerar CSV</string>
+    <string name="b_sync">Sync</string>
+    <string name="b_logout">Desconectar Conta</string>
+    <string name="backup_info">O gerenciador de back-up irá criar um arquivo chamado [diabetes_backup.db] na pasta [Doce Desafio/Backup] do cartão de memória interno do dispositivo. Lembre-se de salvar esse arquivo em um email ou no cartão de memória externo para futuramente recupera-lo em outro dispositivo.</string>
+    <string name="restaurar_info">Para restaurar os dados do backup, o arquivo [diabetes_backup.db] deve estar dentro da pasta [Doce Desafio/Backup] do cartão de memória interno do dispositivo. Lembre-se que ao efetuar a restauração dos dados, as informações atuais serão substituídas pelas do back-up. \n\n Deseja continuar?</string>
+    <string name="encerrar_app">Deseja encerrar o aplicativo?</string>
+    <string name="csv_info">O arquivo será armazenado no diretório do aplicativo. Deseja continuar?</string>
+    <string name="pergunta_logout">Ao sair do aplicativo os registros locais serão excluídos. Para efetuar login novamente será necessária uma conexão com a internet. Deseja realmente sair?</string>
+    <string name="usuario">Usuário</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="senha_confirmacao">Confirme a senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="manter_conectado">Manter conectado</string>
+    <string name="erro_autenticacao">Usuário ou senha inválidos</string>
+    <string name="pular">Pular</string>
+    <string name="criar_conta">Criar nova conta</string>
+    <string name="tipo_glicemia">TIPO</string>
+    <string name="teste_math">TIPO</string>
+    <string name="b_glicemia_por_tipo">Tipo</string>
+    <string name="b_atividades_por_tipo">Tipo</string>
+
+    <string-array name="tipo_exercicio">
+        <item>Corrida</item>
+        <item>Caminhada</item>
+        <item>Bicicleta</item>
+        <item>Natação</item>
+        <item>Kung Fu</item>
+    </string-array>
+    <string-array name="intensidade_exercicio">
+        <item>Muito Leve</item>
+        <item>Leve</item>
+        <item>Moderado</item>
+        <item>Intenso</item>
+        <item>Muito Intenso</item>
+    </string-array>
+    <string-array name="tipo_refeicao">
+        <item>Café da manhã</item>
+        <item>Colação</item>
+        <item>Almoço</item>
+        <item>Lanche</item>
+        <item>Janta</item>
+        <item>Ceia</item>
+    </string-array>
+    
+    <string-array name="tipo_glicemia">
+        <item>Nenhum</item>
+        <item>Em Jejum</item>
+        <item>Pré Prandial</item>
+        <item>Pós Prandial</item>
+    </string-array>
+
+    <string name="exercicio_modalidade">Modalidade</string>
+    <string name="intensidade1">"1- Muito Leve 2 - Leve  3 - Moderado "</string>
+    <string name="intensidade2">4-Intenso 5- Muito Intenso</string>
+    <string name="titulo_glicemia_tipo">Glicemia - Tipo</string>
+
+</resources>

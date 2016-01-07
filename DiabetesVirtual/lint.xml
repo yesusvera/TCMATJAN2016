@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="DefaultLocale">
+        <ignore path="src/br/com/diabetesvirtual/activity/PerfilActivity.java" />
+    </issue>
+    <issue id="NewApi" severity="ignore">
+        <ignore path="src/br/com/diabetesvirtual/activity/ExerciciosActivity.java" />
+        <ignore path="src/br/com/diabetesvirtual/adapter/ExerciciosAdapter.java" />
+    </issue>
+</lint>

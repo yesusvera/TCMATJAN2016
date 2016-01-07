@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"  
+	android:orientation="vertical">
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="40dp" 
+	    android:background="@drawable/topo">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/titulo_tabela"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout> 
+
+	<RadioGroup android:id="@id/radioGroup"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/gelo"
+	    android:gravity="center"
+	    android:orientation="horizontal" >
+	    <RadioButton android:id="@+id/tabela_normal"
+	        android:text="@string/tabela_geral"
+	        android:checked="true"/>
+	    <RadioButton android:id="@+id/tabela_favorito"
+	        android:text="@string/tabela_favoritos"/>
+	</RadioGroup>
+
+	<View android:layout_width="fill_parent"
+	    android:layout_height="0.8dp"
+	    android:background="#000"/>
+	<LinearLayout android:id="@+id/tela1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    <LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal" 
+			android:gravity="center">       
+	       <View android:layout_width="0dp" android:layout_height="15dp" android:layout_weight="1" 
+	            android:background="#B8860B" android:layout_margin="2dp"/>
+	       <TextView 
+	          android:layout_width="wrap_content" android:layout_height="wrap_content"  
+	          android:text="@string/medida" android:layout_margin="2dp"
+	          android:textColor="#B8860B"/>
+	       
+	       <View android:layout_width="0dp" android:layout_height="15dp" android:layout_weight="1" 
+	            android:background="#008B8B" android:layout_margin="2dp"/>
+	       <TextView 
+	          android:layout_width="wrap_content" android:layout_height="wrap_content"  
+	          android:text="@string/peso" android:layout_margin="2dp"
+	          android:textColor="#008B8B"/>
+	       
+	       <View android:layout_width="0dp" android:layout_height="15dp" android:layout_weight="1" 
+	            android:background="#FF6A6A" android:layout_margin="2dp"/>
+	       <TextView 
+	          android:layout_width="wrap_content" android:layout_height="wrap_content"  
+	          android:text="@string/carboidrato" android:layout_margin="2dp"
+	          android:textColor="#FF6A6A"/>        
+	    </LinearLayout>
+	    
+	    <LinearLayout android:layout_width="fill_parent"
+			android:layout_height="40dp">
+	        <EditText  android:layout_width="fill_parent"
+				android:layout_height="fill_parent" 
+	         	android:id="@+id/filtro_tabela"   
+	         	android:hint="@string/hint_pesquisar"
+	         	android:gravity="center"
+	         	android:background="@drawable/editext"
+	         	android:layout_marginLeft="-2dp"
+		        android:layout_marginRight="-2dp"/>      
+	    </LinearLayout>
+	     
+		<ListView
+			android:id="@+id/lista_classe"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+</LinearLayout>
+    
+      
+   
+
+

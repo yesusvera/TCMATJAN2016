@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/gelo">    
+	
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">        
+        <LinearLayout android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:paddingLeft="5dp"
+        	android:paddingRight="5dp"
+        	android:layout_marginTop="5dp">
+	        <TextView android:text="@string/ultima_glic_1"
+	            android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+	            android:textColor="#000"
+	            android:textSize="14sp"/>
+	        <TextView android:id="@+id/ultima_glicemia"
+	            android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+	            android:textColor="@color/azul_escuro1"
+	            android:textSize="16sp"
+	            android:textStyle="bold"
+	            android:gravity="center"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_margin="5dp">
+	        <TextView android:text="@string/ultima_glic_2"
+	            android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+	            android:textColor="#000"
+	            android:textSize="14sp"/>
+	        <TextView android:id="@+id/ultima_glicecmia_data"
+	            android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+	            android:textColor="@color/azul_escuro1"
+	            android:textSize="16sp"
+	            android:textStyle="bold"
+	            android:gravity="center"/>
+        </LinearLayout>
+ <!-- ATENÇÂO -->       
+        <LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/fundo_cinza_claro_bordas"
+			android:layout_marginLeft="-2dp"
+			android:layout_marginRight="-2dp"
+			android:layout_marginTop="5dp"
+			android:padding="5dp"
+			android:gravity="center"
+			android:orientation="vertical">
+	        <TextView android:text="@string/atencao"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:textSize="14sp"
+				android:textColor="#FF0000"
+				android:textStyle="bold"
+				android:gravity="center"
+				android:layout_marginTop="5dp"/>
+			<TextView android:text="@string/fator_dialog_glic"
+				 android:layout_width="fill_parent"
+				 android:layout_height="wrap_content"
+				 android:textSize="14sp"
+				 android:textColor="#000"
+				 android:gravity="center"
+				 android:layout_marginBottom="5dp"/>	   
+		</LinearLayout>      
+    </LinearLayout>
+    
+	<LinearLayout android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:background="@drawable/botao"
+		android:orientation="horizontal">	
+		<Button android:id="@+id/sug_b_cancel"
+		    style="@style/tema_botao" 
+		    android:text="@string/b_cancelar"
+		    android:layout_height="50dp"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"/>	
+		<View android:layout_width="0.6dp" 
+	            android:layout_height="fill_parent" 
+	            android:layout_marginTop="5dp"
+			    android:layout_marginBottom="5dp" 
+			    android:background="@color/cinza_claro"/>	
+		<Button android:id="@+id/sug_b_nova"
+		    style="@style/tema_botao" 
+		    android:text="@string/b_nova"
+		    android:layout_height="50dp"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"/>	
+		<View android:layout_width="0.6dp" 
+	            android:layout_height="fill_parent" 
+	            android:layout_marginTop="5dp"
+			    android:layout_marginBottom="5dp" 
+			    android:background="@color/cinza_claro"/>	
+		<Button android:id="@+id/sug_b_usar"
+		    style="@style/tema_botao" 
+		    android:text="@string/b_usar"
+		    android:layout_height="50dp"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"/>	
+	</LinearLayout>
+    
+</LinearLayout>

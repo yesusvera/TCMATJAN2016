@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/gelo"
+    android:padding="10dp">
+    
+<!-- QUANTIDADE -->	 
+	    <LinearLayout android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="left">
+		    <TextView android:text="@string/totalDados"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="18sp"
+		        android:textColor="#1E90FF"
+		        android:textStyle="bold"
+		        android:layout_marginRight="10dp"/>		
+			<TextView android:id="@+id/estatistica_qtd"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		       	android:textSize="22sp"
+		        android:textColor="#FF7F00"
+		        android:textStyle="bold"/>	
+		</LinearLayout>
+		
+<!-- MEDIA -->		
+		<LinearLayout android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="left">
+		    <TextView android:text="@string/mediaArit"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="18sp"
+		        android:textColor="#1E90FF"
+		        android:textStyle="bold"
+		        android:layout_marginRight="10dp"/>		
+			<TextView android:id="@+id/estatistica_media"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		       	android:textSize="22sp"
+		        android:textColor="#FF7F00"
+		        android:textStyle="bold"/>	
+		</LinearLayout>
+		
+<!-- DESVIO PADRAO -->		
+		<LinearLayout android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="left">
+		    <TextView android:text="@string/desvioPadrao"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="18sp"
+		        android:textColor="#1E90FF"
+		        android:textStyle="bold"
+		        android:layout_marginRight="10dp"/>		
+			<TextView android:id="@+id/estatistica_desvio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		       	android:textSize="22sp"
+		        android:textColor="#FF7F00"
+		        android:textStyle="bold"/>	
+		</LinearLayout>
+
+
+</LinearLayout>

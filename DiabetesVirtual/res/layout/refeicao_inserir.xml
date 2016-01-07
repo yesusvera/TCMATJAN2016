@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gelo"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/topo" >
+
+        <TextView
+            style="@style/fonte_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/titulo_refeicao" />
+    </LinearLayout>
+
+    <!-- LEGENDA ESTATICA ENTRE TODAS AS TELAS -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginRight="-2dp"
+        android:layout_marginTop="-2dp"
+        android:background="@drawable/fundo_branco_com_bordas"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:padding="2dp" >
+
+        <TextView
+            style="@style/fonte_totais2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="@string/total_carb" />
+
+        <TextView
+            android:id="@+id/textView_total_carb"
+            style="@style/fonte_totais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            style="@style/fonte_totais2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="@string/peso_total_down" />
+
+        <TextView
+            android:id="@+id/textView_total_peso"
+            style="@style/fonte_totais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp" />
+    </LinearLayout>
+
+    <!-- CHECKBOX SUGESTÃ‚O INSULINA -->
+
+
+    <!--
+    <LinearLayout android:id="@+id/sugestao_check"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/cinza_claro"
+        android:gravity="center">
+        <CheckBox android:id="@+id/checkBox_sugestao"
+            android:onClick="sugestaoCheckBox"
+            android:checked="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/> 
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+	        <TextView android:text="@string/insulina_sugestao"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="14sp"
+	            android:textColor="@color/azul_escuro1"
+	            android:textStyle="bold"/>
+	        <TextView android:text="@string/insulina_sugestao_obs"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="12sp"
+	            android:textColor="@color/azul_escuro1"/>
+        </LinearLayout>               
+    </LinearLayout>
+    -->
+
+
+    <!-- TELA DOS ITENS ADICIONADOS -->
+
+    <RelativeLayout
+        android:id="@+id/layout_add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/legenda"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginRight="-2dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/fundo_branco_com_bordas"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:background="#B8860B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="3dp"
+                android:text="@string/medida"
+                android:textColor="#B8860B"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:background="#FF6A6A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="3dp"
+                android:text="@string/carboidrato"
+                android:textColor="#FF6A6A"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lista_add"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout"
+            android:layout_below="@+id/legenda"
+            android:cacheColorHint="@color/gelo" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/botao"
+            android:orientation="horizontal" >
+
+            <Button
+                style="@style/tema_botao"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="add"
+                android:text="@string/b_adicionar" />
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cinza_claro" />
+
+            <Button
+                style="@style/tema_botao"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="avancar"
+                android:text="@string/b_avancar" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- TELA DA TABELA E ALIMENTOS -->
+
+    <RelativeLayout
+        android:id="@+id/layout_tabela"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RadioGroup
+            android:id="@id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/gelo"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/tabela_normal"
+                android:checked="true"
+                android:text="@string/tabela_geral" />
+
+            <RadioButton
+                android:id="@+id/tabela_favorito"
+                android:text="@string/tabela_favoritos" />
+        </RadioGroup>
+        <!-- LINHA DE DIVISÃƒO -->
+
+        <View
+            android:id="@id/topo1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:layout_below="@id/radioGroup"
+            android:background="#000" />
+
+        <LinearLayout
+            android:id="@id/topo2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topo1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="#B8860B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="@string/medida"
+                android:textColor="#B8860B" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="#008B8B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="@string/peso"
+                android:textColor="#008B8B" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="#FF6A6A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="@string/carboidrato"
+                android:textColor="#FF6A6A" />
+        </LinearLayout>
+        <!-- PESQUISAR -->
+
+        <LinearLayout
+            android:id="@id/topo3"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/topo2" >
+
+            <EditText
+                android:id="@+id/filtro_tabela_add"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginRight="-2dp"
+                android:background="@drawable/editext"
+                android:gravity="center"
+                android:hint="@string/hint_pesquisar" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lista_tabela"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topo3" />
+    </RelativeLayout>
+
+    <!-- TELA QUE PEGA O DATA-HORA E AS OBS DA REFEIÃ‡ÃƒO -->
+
+    <RelativeLayout
+        android:id="@+id/layout_data_hora"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ScrollView
+            android:id="@+id/ref_data_hora"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/tipo_refeicao"
+                    style="@style/fonte_dataHora"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#fff"
+                    android:text="@string/tipo_glicemia" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
+
+                <Spinner
+                    android:id="@+id/tipo_refeicao_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <!--
+                    <HorizontalScrollView android:layout_width="wrap_content"
+						android:layout_height="wrap_content">											
+						<LinearLayout android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:gravity="center">
+							<RadioGroup android:id="@+id/ref_radioGroup1"
+								    android:layout_width="wrap_content"
+							        android:layout_height="wrap_content"
+							        android:orientation="horizontal">  					    
+								    <RadioButton android:id="@+id/ref_cafe"
+									    android:layout_width="wrap_content"
+									    android:layout_height="wrap_content"							    
+									    android:checked="true"/>
+								    <RadioButton android:id="@+id/ref_almoco"
+									    android:layout_width="wrap_content"
+									    android:layout_height="wrap_content"/>
+							</RadioGroup>							 
+							<RadioGroup android:id="@+id/ref_radioGroup2"
+								    android:layout_width="wrap_content"
+							        android:layout_height="wrap_content"
+							        android:orientation="horizontal">
+								    <RadioButton android:id="@+id/ref_lanche"
+									    android:layout_width="wrap_content"
+									    android:layout_height="wrap_content"/>
+								    <RadioButton android:id="@+id/ref_janta"
+									    android:layout_width="wrap_content"
+									    android:layout_height="wrap_content"/>
+						    </RadioGroup>
+						    					    	
+						</LinearLayout>				    
+					</HorizontalScrollView>
+                -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@id/tipo_glicemia"
+                    style="@style/fonte_dataHora"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#000" />
+
+                <DatePicker
+                    android:id="@+id/datePicker_refeicao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@id/hora_selecionada"
+                    style="@style/fonte_dataHora"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#000" />
+
+                <TimePicker
+                    android:id="@+id/timePicker_refeicao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <requestFocus />
+                </TimePicker>
+
+                <!--
+                              <Spinner
+						        android:id="@+id/tipo_refeicao_spinner"
+						        android:layout_width="match_parent"
+						        android:layout_height="wrap_content" />
+                -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/text_sugestao"
+                    style="@style/fonte_dataHora"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#fff"
+                    android:text="@string/sugestao_insulina" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#000" />
+                <!--
+                    <CheckBox android:id="@+id/checkBox_sugestao2"
+            			android:checked="false"
+            			android:onClick="sugestao"
+            			android:layout_width="wrap_content"
+            			android:layout_height="wrap_content"/> 
+					<TextView android:text="@string/insulina_sugestao"
+	            		android:layout_width="wrap_content"
+	            		android:layout_height="wrap_content"
+	           			 android:textSize="14sp"
+	            		android:textColor="@color/azul_escuro1"
+	            		android:textStyle="bold"/>
+	        		<TextView android:text="@string/insulina_sugestao_obs"
+	            		android:layout_width="wrap_content"
+	           			android:layout_height="wrap_content"
+	            		android:textSize="12sp"
+	           			android:textColor="@color/azul_escuro1"/>
+                -->
+
+                <LinearLayout
+                    android:id="@+id/sugestao_check"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/checkBox_sugestao2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:checked="false"
+                        android:onClick="sugestao" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/insulina_sugestao"
+                            android:textColor="@color/azul_escuro1"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/insulina_sugestao_obs"
+                            android:textColor="@color/azul_escuro1"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- OBS -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gelo" >
+
+                    <EditText
+                        android:id="@+id/ref_obs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/editext"
+                        android:ellipsize="start"
+                        android:gravity="center"
+                        android:hint="@string/hint_Obs"
+                        android:inputType="textMultiLine" />
+                </LinearLayout>
+                <!-- ATENÃ‡Ã‚O -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_marginRight="-2dp"
+                    android:background="@color/cinza_claro"
+                    android:orientation="vertical"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/atencao"
+                        android:textColor="#FF0000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/ref_obs"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/botao"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/b_dataHora_voltar"
+                style="@style/tema_botao"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:onClick="voltarDataHora"
+                android:text="@string/b_voltar" />
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cinza_claro" />
+
+            <Button
+                android:id="@+id/b_dataHora_inserir"
+                style="@style/tema_botao"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:onClick="salvarRefeicao"
+                android:text="@string/b_salvar" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

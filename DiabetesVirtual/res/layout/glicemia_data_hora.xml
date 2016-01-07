@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#fff">    
+    <LinearLayout android:id="@+id/topo1"
+        android:layout_width="fill_parent" 
+        android:layout_height="40dp" 
+	    android:background="@drawable/topo"
+	    android:layout_alignParentTop="true">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/titulo_glicemia_data_hora"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout>
+<!-- RESUMO DATA HORA -->	    
+   <LinearLayout android:id="@+id/topo2"
+        android:layout_width="fill_parent" 
+       	android:layout_height="wrap_content"
+       	android:padding="5dp"
+       	android:orientation="vertical"
+       	android:background="@color/branco"
+       	android:layout_below="@+id/topo1">
+		<TextView android:id="@+id/hora_selecionada"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			style="@style/fonte_dataHora"/>		
+		<TextView android:id="@+id/tipo_glicemia" 
+		    android:layout_marginTop="2dp"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			style="@style/fonte_dataHora"/>
+	</LinearLayout>		
+<!-- BOTOES DA E HORA -->
+   	<LinearLayout android:id="@+id/topo3"
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="wrap_content"   	  
+   	    android:orientation="horizontal"
+   	   	android:layout_below="@+id/topo2"
+   	   	android:background="@drawable/shapebutton">	
+		<Button android:text="@string/b_hora"
+		        style="@style/tema_botao" 
+				android:layout_height="40dp"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:onClick="mostrarDialogTime"/>	
+		<View android:layout_width="0.6dp" android:layout_height="fill_parent" android:layout_marginTop="5dp"
+		    android:layout_marginBottom="5dp" android:background="@color/cinza_claro"/>	   	
+		<Button android:text="@string/b_data"
+		        style="@style/tema_botao" 
+				android:layout_height="40dp"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:onClick="mostrarDialogData"/>
+    </LinearLayout>
+ <!-- LISTA -->   
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topo3"
+        android:layout_above="@+id/bottom">
+		<ListView android:id="@+id/glicemia_lista"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content">	    
+		</ListView>
+	</LinearLayout>
+	
+    <LinearLayout android:id="@+id/bottom" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/botao">
+		<Button android:text="@string/b_voltar"
+            android:layout_height="40dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/tema_botao"
+            android:onClick="voltar_main"/>  
+         <View android:layout_width="0.6dp" 
+            android:layout_height="fill_parent" 
+            android:layout_marginTop="5dp"
+		    android:layout_marginBottom="5dp" 
+		    android:background="@color/cinza_claro"/>
+        <Button android:text="@string/b_pesquisar"
+		        style="@style/tema_botao" 
+				android:layout_height="40dp"
+				android:layout_width="0dp"
+            	android:layout_weight="1"
+				android:onClick="pesquisar"/>
+    </LinearLayout>
+	
+</RelativeLayout>

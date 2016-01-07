@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/cinza_claro">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="40dp" 
+	    android:layout_marginBottom="5dp"
+	    android:background="@drawable/topo">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/titulo_metas"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout>
+	
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal">		    
+	    <ScrollView android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_above="@id/bottom">
+		    <TableLayout android:layout_width="fill_parent" 
+		        android:layout_height="wrap_content"
+		        android:padding="10dp"
+		        android:background="@color/gelo"
+		        android:stretchColumns="0,1,2"
+		        android:layout_gravity="center_horizontal">  	        
+		        <TableRow android:layout_gravity="left"
+		            android:layout_marginBottom="5dp">
+		            <TextView android:text="@string/metas_g_inicial"
+		                style="@style/fonte_perfil"
+		                android:textStyle="normal"/>
+		           	<EditText android:id="@+id/metas_g_inicial"
+		           	    android:inputType="number"
+		           	    android:layout_height="40dp"
+		           	    android:layout_width="60dp"
+						style="@style/fonte_editText_perfil"
+						android:background="@drawable/editext"
+						android:gravity="center"/>
+		           	<TextView android:text="@string/metas_mg_dl"
+		                style="@style/fonte_perfil"
+		                android:layout_marginLeft="5dp"/>
+		        </TableRow >
+		        <TableRow android:layout_gravity="left">
+		            <TextView android:text="@string/metas_g_final"
+		                style="@style/fonte_perfil"
+		                android:textStyle="normal"/>
+		           	<EditText android:id="@+id/metas_g_final"
+		           	    android:inputType="number"
+		           	    android:layout_height="40dp"
+		           	    android:layout_width="60dp"
+						style="@style/fonte_editText_perfil"
+						android:background="@drawable/editext"
+						android:gravity="center"/>
+		           	<TextView android:text="@string/metas_mg_dl"
+		                style="@style/fonte_perfil"
+		                android:layout_marginLeft="5dp"/>
+		        </TableRow >	                	        
+		        <View android:layout_width="fill_parent" 
+		            android:layout_height="0.8dp" 
+		            android:background="#000" 
+		            android:layout_marginTop="5dp" 
+		            android:layout_marginBottom="5dp"/>	        
+		        <TableRow android:layout_gravity="left"
+		            android:layout_marginBottom="5dp">
+		            <TextView android:text="@string/metas_i_inicial"
+		                style="@style/fonte_perfil"
+		                android:textStyle="normal"/>
+		           	<EditText android:id="@+id/metas_i_inicial"
+		           	    android:inputType="number"
+		           	    android:layout_height="40dp"
+		           	    android:layout_width="60dp"
+						style="@style/fonte_editText_perfil"
+						android:background="@drawable/editext"
+						android:gravity="center"/>
+		           	<TextView android:text="@string/metas_unidades"
+		                style="@style/fonte_perfil"
+		                android:layout_marginLeft="5dp"/>
+		        </TableRow >
+		        <TableRow android:layout_gravity="left">
+		            <TextView android:text="@string/metas_i_final"
+		                style="@style/fonte_perfil"
+		                android:textStyle="normal"/>
+		           	<EditText android:id="@+id/metas_i_final"
+		           	    android:inputType="number"
+		           	    android:layout_height="40dp"
+		           	    android:layout_width="60dp"
+						style="@style/fonte_editText_perfil"
+						android:background="@drawable/editext"
+						android:gravity="center"/>
+		           	<TextView android:text="@string/metas_unidades"
+		                style="@style/fonte_perfil"
+		                android:layout_marginLeft="5dp"/>
+		        </TableRow >	
+		                	        
+		        <View android:layout_width="fill_parent" 
+		            android:layout_height="0.8dp" 
+		            android:background="#000" 
+		             android:layout_marginTop="5dp" 
+		             android:layout_marginBottom="5dp"/>
+		       
+		        <TableRow android:layout_gravity="left"
+		            android:layout_marginBottom="5dp">
+		            <TextView android:text="@string/metas_c_inicial"
+		                style="@style/fonte_perfil"
+		                android:textStyle="normal"/>
+		           	<EditText android:id="@+id/metas_c_inicial"
+		           	    android:inputType="number"
+		           	    android:layout_height="40dp"
+		           	    android:layout_width="60dp"
+						style="@style/fonte_editText_perfil"
+						android:background="@drawable/editext"
+						android:gravity="center"/>
+		           	<TextView android:text="@string/metas_gramas"
+		                style="@style/fonte_perfil"
+		                android:layout_marginLeft="5dp"/>
+		        </TableRow >
+		        <TableRow android:layout_gravity="left"
+		            android:layout_marginBottom="10dp">
+		            <TextView android:text="@string/metas_c_final"
+		                style="@style/fonte_perfil"
+		                android:textStyle="normal"/>
+		           	<EditText android:id="@+id/metas_c_final"
+		           	    android:inputType="number"
+		           	    android:layout_height="40dp"
+		           	    android:layout_width="60dp"
+						style="@style/fonte_editText_perfil"
+						android:background="@drawable/editext"
+						android:gravity="center"/>
+		           	<TextView android:text="@string/metas_gramas"
+		                style="@style/fonte_perfil"
+		                android:layout_marginLeft="5dp"/>
+		        </TableRow >
+		        <View android:layout_width="fill_parent" 
+		            android:layout_height="0.8dp" 
+		            android:background="#000" 
+		            android:layout_marginTop="5dp" 
+		            android:layout_marginBottom="10dp"/>
+		        <TextView style="@style/fonte_perfil"
+		            android:text="@string/metas_info_titulo"
+		            android:textStyle="bold"
+		            android:layout_marginBottom="5dp"/>
+		        <TextView android:text="@string/metas_obs"
+		            style="@style/fonte_perfil"
+		            android:textSize="14sp"
+				    android:textColor="#000"
+		            android:textStyle="normal"
+		            android:layout_marginBottom="5dp"/>       
+		    </TableLayout>   
+	    </ScrollView>
+	    
+	    
+	    <LinearLayout android:id="@id/bottom"
+	        android:layout_alignParentBottom="true"
+	        android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+		    android:background="@drawable/botao"
+		    android:orientation="horizontal">				
+		    <Button style="@style/tema_botao" 
+		        android:layout_width="0dp"
+		        android:layout_weight="1"
+		        android:layout_height="40dp"
+		        android:text="@string/b_voltar" 
+				android:gravity="center"
+				android:onClick="voltar"/>	
+			<View android:layout_width="0.6dp" 
+	            android:layout_height="fill_parent" 
+	            android:layout_marginTop="5dp"
+			    android:layout_marginBottom="5dp" 
+			    android:background="@color/cinza_claro"/>						
+		    <Button style="@style/tema_botao" 
+		        android:layout_width="0dp"
+		        android:layout_weight="1"
+		        android:layout_height="40dp"
+		        android:text="@string/b_salvar" 
+				android:gravity="center"
+				android:onClick="salvar"/>	
+		</LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

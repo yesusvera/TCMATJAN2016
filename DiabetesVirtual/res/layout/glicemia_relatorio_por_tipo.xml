@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/topo" >
+
+        <TextView
+            style="@style/fonte_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/titulo_glicemia_tipo" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/tipo_glicemia_relatorio_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:background="#000" />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

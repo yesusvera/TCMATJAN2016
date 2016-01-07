@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">  
+<!-- TELA 1 - RELA DE REFEIÇÔES -->
+	<RelativeLayout android:id="@id/ref_relatorio_tela1"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:background="@color/gelo">    
+	    <LinearLayout android:id="@id/topo1"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="40dp" 
+		    android:background="@drawable/topo"
+		    android:layout_alignParentTop="true">
+			<TextView android:layout_width="match_parent"
+			         android:layout_height="match_parent"
+			         android:text="@string/titulo_refeicao_variacao"
+			         style="@style/fonte_titulo"/>
+		</LinearLayout> 
+	    
+	    <LinearLayout android:id="@id/topo2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="80dp"
+	        android:background="@drawable/fundo"
+	        android:padding="5dp"
+	        android:layout_marginLeft="-2dp"
+	        android:layout_marginRight="-2dp"
+	        android:layout_below="@id/topo1">
+			<EditText android:id="@+id/ref_inicial" 
+			   	android:layout_width="0dp"
+			   	android:layout_weight="1"
+			  	android:layout_height="fill_parent"
+			    android:background="@drawable/editext" 
+			    android:inputType="number" 
+			    style="@style/fonte_editText" 
+			    android:hint="@string/hint_inicio"
+			    android:gravity="center" 
+			    android:ellipsize="start"
+			    android:layout_margin="5dp"/>    
+			   <requestFocus />			    
+			<EditText android:id="@+id/ref_final"
+				style="@style/fonte_editText"
+				android:layout_height="fill_parent"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:background="@drawable/editext"
+				android:gravity="center"
+				android:hint="@string/hint_fim"
+				android:inputType="number" 
+				android:ellipsize="start">
+			</EditText>	    
+	    </LinearLayout>   
+
+	 <!-- LISTA -->   
+	    <LinearLayout android:layout_width="fill_parent"
+		       android:layout_height="wrap_content"
+		       android:background="#fff"
+		       android:layout_below="@id/topo2"
+		       android:layout_above="@id/bottom">
+			<ListView android:id="@+id/refeicao_lista"
+			    android:layout_width="fill_parent" 
+			    android:layout_height="wrap_content">	    
+			</ListView>
+		</LinearLayout>
+	    
+	    <!-- BOTOES -->
+	    <LinearLayout android:id="@id/bottom" 
+	         android:background="@drawable/botao"
+	         android:orientation="horizontal"
+	         android:layout_width="fill_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_alignParentBottom="true">            
+	         <Button android:text="@string/b_voltar"
+	            android:layout_height="40dp"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            style="@style/tema_botao"
+	            android:onClick="voltar"/>  
+	         <View android:layout_width="0.6dp" 
+	            android:layout_height="fill_parent" 
+	            android:layout_marginTop="5dp"
+			    android:layout_marginBottom="5dp" 
+		    	android:background="@color/cinza_claro"/>           
+	         <Button android:text="@string/b_pesquisar"
+	            android:layout_height="40dp"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            style="@style/tema_botao"
+	            android:onClick="pesquisar"/>
+	    </LinearLayout>	 
+	    
+	</RelativeLayout>
+    
+	
+	
+<!-- TELA 2 - DETALHES DAS REFEIÇÔES -->	
+	<LinearLayout android:id="@id/ref_relatorio_tela2"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	    android:background="@color/cinza_claro"
+	    android:visibility="gone">
+	<!-- TITULO DA TELA -->
+	    <LinearLayout android:layout_width="fill_parent" 
+	        android:layout_height="40dp" 
+		    android:background="@drawable/topo">
+			<TextView android:layout_width="match_parent"
+			         android:layout_height="match_parent"
+			         android:text="@string/titulo_refeicao_detalhes"
+			         style="@style/fonte_titulo"/>
+		</LinearLayout> 	    
+	    <RelativeLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:gravity="center">
+	<!-- Detalhes da refeicao -->       
+			<TableLayout android:id="@id/tableLayout_refeicao"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:padding="5dp"
+			    android:layout_alignParentTop="true">			    
+			    <TableRow android:padding="2dp">
+				    <TextView android:text="@string/data_down"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref1"/>
+				    <TextView android:id="@id/textView_data_ref"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref2"/>
+			    </TableRow>
+			    
+			    <TableRow android:padding="2dp">
+				    <TextView android:text="@string/hora_dow"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref1"/>
+				    <TextView android:id="@id/textView_hora_ref"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref2"/>
+			    </TableRow>
+			    
+			    <TableRow  android:padding="2dp">
+				    <TextView android:text="@string/peso_total_down"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref1"/>
+				    <TextView android:id="@id/textView_peso_ref"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref2"/>
+			    </TableRow>
+			    
+			     <TableRow  android:padding="2dp">
+				    <TextView android:text="@string/carb_total_down"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref1"/>
+				    <TextView android:id="@id/textView_carb_ref"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref2"/>
+			    </TableRow>
+			    
+			    <TableRow  android:padding="2dp">
+				    <TextView android:text="@string/tipo_down"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref1"
+				        android:layout_marginRight="5dp"/>
+				    <TextView android:id="@+id/textView_tipo_ref"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref2"/>
+			    </TableRow>
+			    
+			    <TableRow  android:padding="2dp">
+				    <TextView android:text="@string/observacao"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref1"
+				        android:layout_marginRight="5dp"/>
+				    <TextView android:id="@id/textView_obs_ref"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/fonte_do_det_ref2"/>
+			    </TableRow>
+			</TableLayout>
+			
+	 <!-- Legenda dos itens -->    
+	  
+			<LinearLayout android:id="@id/legenda_itens"
+			    android:layout_below="@id/tableLayout_refeicao"
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" 
+				android:gravity="center"
+				android:background="@drawable/fundo_branco_com_bordas"
+				android:layout_marginRight="-2dp"
+				android:layout_marginLeft="-2dp"
+				android:padding="3dp">
+		       
+		       <View android:layout_width="0dp" android:layout_height="15dp" android:layout_weight="1" 
+		            android:background="#B8860B" android:layout_margin="2dp"/>
+		       <TextView 
+		          android:layout_width="wrap_content" android:layout_height="wrap_content"  
+		          android:text="@string/medida" android:layout_margin="2dp"
+		          android:textColor="#B8860B"/>
+		       
+		       <View android:layout_width="0dp" android:layout_height="15dp" android:layout_weight="1" 
+		            android:background="#008B8B" android:layout_margin="2dp"/>
+		       <TextView 
+		          android:layout_width="wrap_content" android:layout_height="wrap_content"  
+		          android:text="@string/qtd_medidas" android:layout_margin="2dp"
+		          android:textColor="#008B8B"/>
+		       
+		       <View android:layout_width="0dp" android:layout_height="15dp" android:layout_weight="1" 
+		            android:background="#FF6A6A" android:layout_margin="2dp"/>
+		       <TextView 
+		          android:layout_width="wrap_content" android:layout_height="wrap_content"  
+		          android:text="@string/carb" android:layout_margin="2dp"
+		          android:textColor="#FF6A6A"/>	               
+	    	</LinearLayout>
+			
+	<!-- Lista de itens -->		
+			<ListView android:id="@id/ListView_itens_ref"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_below="@+id/legenda_itens"/>
+	    </RelativeLayout>
+	</LinearLayout>
+</LinearLayout>

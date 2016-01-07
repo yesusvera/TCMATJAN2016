@@ -1,0 +1,214 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gelo">    
+    <LinearLayout android:layout_width="fill_parent" 
+        android:layout_height="40dp"
+        android:background="@drawable/topo"
+        android:orientation="horizontal"
+        android:gravity="center">        
+	    <TextView android:layout_width="wrap_content"
+	         android:layout_height="fill_parent"
+	         android:text="@string/app_name"
+	         style="@style/fonte_titulo"/>
+	</LinearLayout>
+    
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+		<TableLayout android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:stretchColumns="0,1">	 		
+<!-- METAS -->			
+			<TableLayout android:layout_width="fill_parent"
+			    android:layout_height="wrap_content">
+			    <TextView android:text="@string/titulo_metas_atingidas"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        style="@style/fonte_metas_main"
+			        android:padding="2dp"
+			        android:background="@drawable/fundo_branco_com_bordas"
+			        android:layout_marginLeft="-2dp"
+			        android:layout_marginRight="-2dp"/>
+			    <HorizontalScrollView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center"
+			        android:background="@color/cinza_claro">
+<!-- RADIO GROUP --><RadioGroup android:id="@+id/radioGroup_meta"
+			            android:orientation="horizontal"
+			            android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content"
+			        	android:layout_gravity="center">
+			            <RadioButton android:id="@+id/meta_geral"/>
+			            <RadioButton android:id="@+id/meta_mensal"/>
+			            <RadioButton android:id="@+id/meta_semanal"/>
+			            <RadioButton android:id="@+id/meta_diaria"/>			            
+			        </RadioGroup>
+			    </HorizontalScrollView>
+			    <View android:layout_width="fill_parent" android:layout_height="0.8dp" android:background="#000"/>
+				<TableRow android:gravity="center">
+				    <TextView android:text="@string/metas_glicemica"
+				        style="@style/fonte_metas"
+				        android:layout_marginRight="20dp"/>
+				    <TextView android:id="@+id/meta_glicemica"
+				        style="@style/fonte_metas_dados"/>			    
+				</TableRow >				
+				<TextView android:id="@+id/glic_sucesso"
+				     style="@style/fonte_dataHora_preta"/>
+				<TableRow android:gravity="center">
+				    <TextView android:text="@string/metas_insulina"
+				         style="@style/fonte_metas"
+				         android:layout_marginRight="5dp"/>
+				    <TextView android:id="@+id/meta_insulina"
+				        style="@style/fonte_metas_dados"/>			    
+				</TableRow>				
+				
+				<LinearLayout android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:gravity="center">				    
+	<!-- Legenda --><TextView android:id="@+id/insulina_sucesso"
+						style="@style/fonte_dataHora_preta"
+						android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"/>					
+				</LinearLayout>
+		
+				<TableRow android:gravity="center">
+				    <TextView android:text="@string/metas_carb"
+				         style="@style/fonte_metas"
+				         android:layout_marginRight="5dp"/>
+				    <TextView android:id="@+id/meta_carb"
+				        style="@style/fonte_metas_dados"/>			    
+				</TableRow>	
+				
+				<LinearLayout android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:gravity="center">	
+	<!-- Legenda --><TextView android:id="@+id/ref_sucesso"
+						style="@style/fonte_dataHora_preta"
+						android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"/>								
+<!-- DADOS -->	</LinearLayout>			
+				<TextView android:text="@string/ultimos_dados"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        style="@style/fonte_metas_main"
+			        android:background="@drawable/fundo_branco_com_bordas"
+			        android:layout_marginLeft="-2dp"
+			        android:layout_marginRight="-2dp"
+			        android:padding="2dp"/>
+				<TableRow android:gravity="center">
+				    <TextView android:text="@string/ultima_glicemica"
+				        style="@style/fonte_metas"
+				        android:layout_marginRight="5dp"/>
+				    <TextView android:id="@+id/ultima_glic"
+				        style="@style/fonte_metas_dados"/>			    
+				</TableRow >
+				<LinearLayout android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:gravity="center">
+<!-- Legenda --><TextView android:id="@+id/data_ultima_glic"
+				     style="@style/fonte_dataHora_preta"
+				     android:layout_width="wrap_content"
+				     android:layout_height="wrap_content"/>
+				<TextView android:id="@+id/tipo_ultima_glicemia"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        style="@style/fonte_dataHora_azul"
+					        android:layout_marginLeft="5dp"/>
+				</LinearLayout>
+				<TableRow android:gravity="center">
+				    
+				    <TextView android:text="@string/ultima_insulina"
+				         style="@style/fonte_metas"
+				         android:layout_marginRight="5dp"/>
+				    <TextView android:id="@+id/ultima_insulina"
+				        style="@style/fonte_metas_dados"/>			    
+				</TableRow>
+				
+				<LinearLayout android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:gravity="center">
+	<!-- Legenda --><TextView android:id="@+id/data_ultima_insulina"
+						style="@style/fonte_dataHora_preta"
+						android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"/>
+					<TextView android:id="@+id/tipo_ultima_insulina"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        style="@style/fonte_dataHora_azul"
+					        android:layout_marginLeft="5dp"/>
+				</LinearLayout>
+					
+				<TableRow android:gravity="center">
+				    <TextView android:text="@string/ultimo_carb"
+				         style="@style/fonte_metas"
+				         android:layout_marginRight="5dp"/>
+				    <TextView android:id="@+id/ultima_ref"
+				        style="@style/fonte_metas_dados"/>	
+				    		    
+				</TableRow>
+				<LinearLayout android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:gravity="center">
+<!-- Legenda --><TextView android:id="@+id/data_ultima_ref"
+				     style="@style/fonte_dataHora_preta"
+				     android:layout_width="wrap_content"
+				     android:layout_height="wrap_content"/>
+				<TextView android:id="@+id/tipo_ultima_refeicao"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        style="@style/fonte_dataHora_azul"
+					        android:layout_marginLeft="5dp"/>
+				</LinearLayout>
+			</TableLayout>						
+			
+<!-- BOTOES -->
+			<TableRow  android:minHeight="60dp" >	   		      
+				<Button android:text="@string/b_refeicao" 
+				        android:layout_height="fill_parent"
+				        style="@style/tema_botao"
+				        android:onClick="telaRefeicao"/>				
+				<Button android:text="@string/b_glicemia" android:layout_height="fill_parent"
+				        style="@style/tema_botao"
+				        android:onClick="telaGlicemia"/>
+			</TableRow>  	
+					
+			<TableRow  android:minHeight="60dp">
+				<Button android:text="@string/b_insulina" android:layout_height="fill_parent"
+				        style="@style/tema_botao"
+				        android:onClick="telaInsulina"/>
+				<Button android:text="@string/b_exercicios" android:layout_height="60dp"
+				    	android:layout_width="fill_parent"
+					    style="@style/tema_botao"
+					    android:onClick="telaExercicios"/>				
+			</TableRow>	
+					
+			<TableRow  android:minHeight="60dp">
+				<Button android:text="@string/b_perfil" android:layout_height="fill_parent"
+				        style="@style/tema_botao"
+				        android:onClick="telaPerfil"/>
+				<Button android:text="@string/b_tabela" android:layout_height="fill_parent"
+				        style="@style/tema_botao"
+				        android:onClick="tabela"/>
+			</TableRow>
+			
+			<TableRow  android:minHeight="60dp">			
+				<Button android:text="@string/b_relatorios" 
+				    android:layout_height="60dp"
+			    	android:layout_width="fill_parent"
+				    style="@style/tema_botao"
+				    android:onClick="telaRelatorio"
+				    android:layout_span="2"/>
+			</TableRow>		
+			
+		</TableLayout>
+	</ScrollView>
+</LinearLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gelo"
+    android:orientation="vertical">
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="40dp" 
+	    android:background="@drawable/topo">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/titulo_exercicios"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout>     
+    
+	<ScrollView android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center">	    
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">		    
+		    <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="60dp"
+		        android:background="@color/azul_fundo"
+		        android:orientation="horizontal"
+		        android:padding="10dp"> 	           		   		    
+				<EditText android:id="@+id/exercicio_desc"
+				    android:singleLine="false"
+				    style="@style/fonte_editText"
+				    android:layout_height="fill_parent"
+				    android:layout_width="fill_parent"
+				    android:background="@drawable/editext"
+				    android:gravity="center"
+				    android:hint="@string/exercicios_desc_hint"
+				    android:inputType="textMultiLine" 
+				    android:ellipsize="start"/>
+		    </LinearLayout>
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/cinza_claro"
+		        android:padding="5dp"
+		        android:orientation="vertical">
+				<TextView android:id="@+id/exe_duracao"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:gravity="center"
+				    style="@style/fonte_info"/>
+		        <SeekBar android:id="@+id/exe_seek_duracao" 
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:max="180"/>
+		    </LinearLayout>
+		    
+<!-- TIPOS DE EXERCICIOS -->
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    <TextView android:text="@string/exercicio_tipo"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:background="@color/branco"
+		        style="@style/fonte_info"/>
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    <RadioGroup android:id="@+id/exe_radio_tipo"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="5dp"
+		        android:orientation="horizontal"
+		        android:gravity="center"
+		        android:background="@color/cinza_claro">  
+			    <RadioButton android:id="@+id/exe_aero"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"/>
+			    <RadioButton android:id="@+id/exe_anaero"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"/>
+	    	</RadioGroup>
+<!-- INTENSIDADE DOS EXERCICIOS -->
+			 <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+
+		    <TextView
+		        style="@style/fonte_info"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/branco"
+		        android:gravity="center"
+		        android:text="@string/exercicio_modalidade" />
+
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+			
+		    <Spinner
+		        android:id="@+id/tipo_glicemia_relatorio_spinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+	    	
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    <TextView android:text="@string/exercicio_intensidade"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        style="@style/fonte_info"
+		        android:background="@color/branco"/>
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    <Spinner
+		        android:id="@+id/intensidade_exercicio_spinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+		    
+		    <!-- <RadioGroup android:id="@+id/exe_radio_intensidade"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="5dp"
+		        android:orientation="horizontal"
+		        android:gravity="center"
+		        android:background="@color/cinza_claro">
+			    <RadioButton android:id="@+id/exe_muito_leve"
+			        android:text="@string/exercicio_muito_leve2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"/>  
+			    <RadioButton android:id="@+id/exe_leve"
+			        android:text="@string/exercicio_leve2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"/>
+			    <RadioButton android:id="@+id/exe_moderado"
+			        android:text="@string/exercicio_moderado2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"/>
+			    <RadioButton android:id="@+id/exe_intenso"
+			        android:text="@string/exercicio_intenso2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"/>
+			    <RadioButton android:id="@+id/exe_muito_intenso"
+			        android:text="@string/exercicio_muito_intenso2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"/>
+	    	 </RadioGroup> -->
+	    	<!-- <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+ 	    	
+	    	<Spinner
+	    	    android:id="@+id/intensidade_spinner"
+	    	    android:layout_width="match_parent"
+	    	    android:layout_height="wrap_content" />
+		    
+	    	
+	    	
+	    	 <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/ -->>
+
+		    <!-- 	<TextView
+		    	    android:id="@+id/texto_intensidade1"
+		    	    style="@style/fonte_dataHora"
+		    	    android:layout_width="fill_parent"
+		    	    android:layout_height="wrap_content"
+		    	    android:background="#fff"
+		    	    android:text="@string/intensidade1" />
+
+		   		<TextView
+		   		    android:id="@+id/texto_intensidade2"
+		   		    style="@style/fonte_dataHora"
+		   		    android:layout_width="fill_parent"
+		   		    android:layout_height="wrap_content"
+		   		    android:background="#fff"
+		   		    android:text="@string/intensidade2" /> -->
+		   		
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+	    	
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+
+		    	<TextView android:id="@+id/exe_dia_selecionado"
+			        android:text="@string/dia" 
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:background="#fff"
+				    style="@style/fonte_dataHora"/>		    
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    
+		    <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="5dp"
+		        android:gravity="center"
+		        android:background="@color/azul_fundo">
+		        <DatePicker android:id="@+id/exe_data_picker" 
+				        android:layout_width="wrap_content" 
+				        android:layout_height="wrap_content"/>  	         
+		    </LinearLayout>
+		    
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    <TextView android:id="@+id/exe_hora_selecionada" 
+			    android:text="@string/hora" 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    style="@style/fonte_dataHora"
+			    android:background="#fff"/>	    
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    
+		    <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:padding="5dp"
+		        android:orientation="horizontal"
+		        android:background="@color/azul_fundo">
+		        <TimePicker android:id="@+id/exe_time_picker" 
+					    android:layout_width="0dp" 
+					    android:layout_height="wrap_content"
+					    android:layout_weight="1"/>
+		        <LinearLayout android:layout_width="0dp" 
+		            android:layout_weight="1"
+				    android:layout_height="fill_parent"
+				    android:background="@drawable/fundo_branco_arredondado"
+				    android:layout_margin="5dp"
+				    android:padding="10dp">
+					<Button style="@style/tema_botao_inserir" 
+					    android:text="@string/b_salvar"
+					    android:layout_height="fill_parent"
+					    android:layout_width="fill_parent"
+					    android:onClick="salvar"/>	
+				</LinearLayout>  	
+		    </LinearLayout>	    
+		    <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		</LinearLayout>	    
+	</ScrollView>
+
+
+
+</LinearLayout>

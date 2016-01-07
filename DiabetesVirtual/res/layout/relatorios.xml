@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/gelo">
+    <LinearLayout android:layout_width="fill_parent" 
+        android:layout_height="40dp" 
+	    android:background="@drawable/topo">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/titulo_relatorios"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout> 
+    
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">           
+<!-- PRIMEIRAAAA rela de botoes - HISTORICO -->   
+ 			<TextView android:text="@string/titulo_historico"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 style="@style/fonte_tela_relatorio"
+                 android:background="@drawable/fundo_gelo_bordas"
+                 android:layout_marginLeft="-2dp"
+                 android:layout_marginRight="-2dp"/>     
+            <TableLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:stretchColumns="0,1">                
+                <TableRow android:minHeight="50dp">
+	                <Button style="@style/tema_botao" 
+	                    android:layout_height="fill_parent"
+					    android:text="@string/b_relatorio" 
+					    android:onClick="historico_geral"/>
+	                <Button style="@style/tema_botao" 
+	                    android:layout_height="fill_parent"
+					    android:text="@string/b_historico_tipo" 
+					    android:onClick="historico_tipo"/>
+				</TableRow>          
+            </TableLayout>              
+ <!-- Primeira rela de botoes - GLICEMIA -->
+          	<TextView android:text="@string/glicemia"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 style="@style/fonte_tela_relatorio"
+                 android:background="@drawable/fundo_gelo_bordas"
+                 android:layout_marginLeft="-2dp"
+                 android:layout_marginRight="-2dp"/>       
+            <TableLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:stretchColumns="0,1">                
+                <TableRow android:minHeight="50dp">
+	                <Button style="@style/tema_botao" 
+	                    android:layout_height="fill_parent"
+					    android:text="@string/b_relatorio" 
+					    android:onClick="glic_geral"/>
+					<Button style="@style/tema_botao" 
+					    	android:layout_height="fill_parent"
+						    android:text="@string/b_intervalo" 
+						    android:onClick="glic_variacaoGlicemica"/>
+				</TableRow>
+				
+                <TableRow android:minHeight="50dp">
+					<Button style="@style/tema_botao" 
+					   		android:layout_height="fill_parent"
+						    android:text="@string/b_data_hora" 
+						    android:onClick="glic_dataHora"/>
+					<Button style="@style/tema_botao" 
+					    	android:layout_height="fill_parent"
+						    android:text="@string/b_grafico" 
+						    android:onClick="glic_grafico"/>	
+                </TableRow>
+                
+                     <TableRow android:minHeight="50dp">
+
+					<Button
+					    style="@style/tema_botao"
+					    android:layout_height="fill_parent"
+					    android:layout_span="2"
+					    android:onClick="glicemiaRelatorioPorTipo"
+					    android:text="@string/b_glicemia_por_tipo" />
+
+                </TableRow>
+                
+            </TableLayout>
+           
+<!-- Segunda rela de botoes - INSULINA -->
+			<TextView android:text="@string/insulina_up"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 style="@style/fonte_tela_relatorio"
+                 android:background="@drawable/fundo_gelo_bordas"
+                 android:layout_marginLeft="-2dp"
+                 android:layout_marginRight="-2dp"/>        
+            <TableLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:stretchColumns="0,1">                
+                <TableRow android:minHeight="50dp">
+	                <Button style="@style/tema_botao" 
+	                    android:layout_height="fill_parent"
+					    android:text="@string/b_relatorio" 
+					    android:onClick="insulina_geral"/>
+					<Button style="@style/tema_botao" 
+					    	android:layout_height="fill_parent"
+						    android:text="@string/b_insulina_por_tipo" 
+						    android:onClick="relatorioPorTipo"/>
+				</TableRow>
+				
+                <TableRow android:minHeight="50dp">
+					<Button style="@style/tema_botao" 
+					   		android:layout_height="fill_parent"
+						    android:text="@string/b_data_hora" 
+						    android:onClick="insulina_dataHora"/>
+					<Button style="@style/tema_botao" 
+					    	android:layout_height="fill_parent"
+						    android:text="@string/b_grafico" 
+						    android:onClick="insulina_grafico"/>	
+                </TableRow>
+            </TableLayout>
+ <!-- Terceira rela de botoes - REFEICAO -->   
+ 			<TextView android:text="@string/ref_up"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 style="@style/fonte_tela_relatorio"
+                 android:background="@drawable/fundo_gelo_bordas"
+                 android:layout_marginLeft="-2dp"
+                 android:layout_marginRight="-2dp"/>     
+            <TableLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:stretchColumns="0,1">                
+                <TableRow android:minHeight="50dp">
+	                <Button style="@style/tema_botao" 
+	                    android:layout_height="fill_parent"
+					    android:text="@string/b_relatorio" 
+					    android:onClick="ref_geral"/>
+					<Button style="@style/tema_botao" 
+					    	android:layout_height="fill_parent"
+						    android:text="@string/b_intervalo"
+						    android:onClick="ref_variacao"/>
+				</TableRow>
+				
+                <TableRow android:minHeight="50dp">
+					<Button style="@style/tema_botao" 
+					   		android:layout_height="fill_parent"
+						    android:text="@string/b_data_hora"
+						    android:onClick="ref_data_hora"/>
+					<Button style="@style/tema_botao" 
+					    	android:layout_height="fill_parent"
+						    android:text="@string/b_grafico"
+						    android:onClick="refeicao_grafico"/>	
+                </TableRow>
+                
+                <TableRow android:minHeight="50dp">
+					<Button style="@style/tema_botao" 
+					   		android:layout_height="fill_parent"
+						    android:text="@string/b_ref_itens"
+						    android:onClick="ref_detalhes"
+						    android:layout_span="2"/>
+                </TableRow>
+            </TableLayout>           
+ 
+<!-- Quarta rela de botoes - EXERCICIOS -->   
+ 			<TextView android:text="@string/titulo_exercicios_up"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 style="@style/fonte_tela_relatorio"
+                 android:background="@drawable/fundo_gelo_bordas"
+                 android:layout_marginLeft="-2dp"
+                 android:layout_marginRight="-2dp"/>     
+            <TableLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:stretchColumns="0,1">                
+                <TableRow android:minHeight="50dp">
+	                <Button style="@style/tema_botao" 
+	                    android:layout_height="fill_parent"
+					    android:text="@string/b_relatorio" 
+					    android:onClick="exe_relatorio_geral"/>
+
+	                    <Button
+	                        style="@style/tema_botao"
+	                        android:layout_height="fill_parent"
+	                        android:onClick="exercicioRelatorioPorTipo"
+	                        android:text="@string/b_atividades_por_tipo" />
+
+				</TableRow>
+            </TableLayout>  
+            
+            
+
+        </LinearLayout>    
+    </ScrollView>
+</LinearLayout>

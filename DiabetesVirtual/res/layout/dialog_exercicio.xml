@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#fff">
+    
+    <TableLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/fundo_cinza_claro_bordas">        
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/dia"
+                style="@style/fonte_detalhe_exe"/>
+            <TextView android:id="@+id/exe_det_dia"
+                 style="@style/fonte_detalhe_exe_preto"
+                  android:gravity="center"/>
+        </TableRow>
+        
+        <View android:layout_width="fill_parent" android:layout_height="0.6dp"
+            android:layout_margin="5dp" android:background="#000"/>
+        
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/hora"
+                 style="@style/fonte_detalhe_exe"/>
+            <TextView android:id="@+id/exe_det_hora"
+                 style="@style/fonte_detalhe_exe_preto"
+                  android:gravity="center"/>
+        </TableRow>
+        
+        <View android:layout_width="fill_parent" android:layout_height="0.6dp"
+            android:layout_margin="5dp" android:background="#000"/>
+        
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/exercicio_desc_up"
+                 style="@style/fonte_detalhe_exe"/>
+            <TextView android:id="@+id/exe_det_desc"
+                 style="@style/fonte_detalhe_exe_preto"
+                  android:gravity="center"/>
+        </TableRow>
+        
+        <View android:layout_width="fill_parent" android:layout_height="0.6dp"
+            android:layout_margin="5dp" android:background="#000"/>
+        
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/exercicio_duracao_up"
+                 style="@style/fonte_detalhe_exe"/>
+            <TextView android:id="@+id/exe_det_duracao"
+                 style="@style/fonte_detalhe_exe_preto"
+                  android:gravity="center"/>
+        </TableRow>
+        
+        <View android:layout_width="fill_parent" android:layout_height="0.6dp"
+            android:layout_margin="5dp" android:background="#000"/>
+        
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/exercicio_tipo_up"
+                 style="@style/fonte_detalhe_exe"/>
+            <TextView android:id="@+id/exe_det_tipo"
+                 style="@style/fonte_detalhe_exe_preto"
+                  android:gravity="center"
+                  android:textStyle="bold"/>
+        </TableRow>
+        
+        <View android:layout_width="fill_parent" android:layout_height="0.6dp"
+            android:layout_margin="5dp" android:background="#000"/>
+        
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/exercicio_intensidade_up"
+                 style="@style/fonte_detalhe_exe"
+                 android:layout_marginRight="5dp"/>
+            <TextView android:id="@+id/exe_det_intensidade"
+                 style="@style/fonte_detalhe_exe_preto"
+                 android:textStyle="bold"
+                 android:gravity="center"/>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+        android:background="@drawable/fundo_cinza_claro_bordas"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginRight="-2dp"
+        android:padding="5dp">
+	    <Button android:id="@+id/exe_b_ok"
+			style="@style/tema_botao_bordas" 
+			android:text="@string/b_ok"
+			android:layout_height="40dp"
+			android:layout_width="fill_parent"/>	
+   	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/branco">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="40dp"
+	    android:background="@drawable/topo">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/titulo_exercicio_tipo"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout>  
+	
+	<RadioGroup android:id="@+id/exercicio_radio_group"  
+        android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:background="@color/branco">  
+		<RadioButton android:id="@+id/exercicios_todos"
+		    android:text="@string/todos"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:checked="true" />	       
+
+		<RadioButton
+		    android:id="@+id/aerobico"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" />
+
+		<RadioButton
+		    android:id="@+id/anaerobico"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" />
+
+    </RadioGroup>
+	<View android:layout_width="fill_parent"
+	    android:layout_height="0.8dp"
+	    android:background="#000"/>
+	
+	<ListView android:id="@+id/lista_exercicios" 
+		android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"/>
+</LinearLayout>

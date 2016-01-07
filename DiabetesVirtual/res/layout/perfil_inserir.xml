@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/gelo"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/topo" >
+
+        <TextView
+            style="@style/fonte_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/titulo_perfil" />
+    </LinearLayout>
+    <!-- PRIMEIRA TELA -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#000" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#000" />
+
+    <RelativeLayout
+        android:id="@+id/perfil_tela1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/bottom"
+            android:layout_alignParentTop="true"
+            android:padding="5dp" >
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/fundo_cinza_claro_arredondado"
+                android:padding="10dp"
+                android:stretchColumns="0,1,2" >
+
+                <TableRow
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp" >
+
+                    <EditText
+                        android:id="@+id/perfil_nome"
+                        style="@style/fonte_editText_perfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_span="3"
+                        android:background="@drawable/editext"
+                        android:ellipsize="start"
+                        android:gravity="center"
+                        android:hint="@string/nome"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#000" />
+
+                <TableRow android:layout_gravity="left" >
+
+                    <TextView
+                        style="@style/fonte_perfil"
+                        android:text="@string/peso" />
+
+                    <EditText
+                        android:id="@+id/perfil_peso"
+                        style="@style/fonte_editText_perfil"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/editext"
+                        android:gravity="center"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        style="@style/fonte_perfil"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/perfil_kg" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#000" />
+
+                <TableRow android:layout_gravity="left" >
+
+                    <TextView
+                        style="@style/fonte_perfil"
+                        android:text="@string/altura_down" />
+
+                    <EditText
+                        android:id="@+id/perfil_altura"
+                        style="@style/fonte_editText_perfil"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/editext"
+                        android:gravity="center"
+                        android:inputType="number" />
+
+                    <TextView
+                        style="@style/fonte_perfil"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/perfil_cm" />
+                </TableRow>
+
+                <TableRow android:layout_gravity="left" >
+
+                    <TextView
+                        style="@style/fonte_perfil"
+                        android:text="@string/data_nasc_down" />
+
+                    <EditText
+                        android:id="@+id/perfil_data_nasc"
+                        style="@style/fonte_editText_perfil"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_span="2"
+                        android:background="@drawable/editext"
+                        android:ellipsize="start"
+                        android:gravity="center"
+                        android:hint="@string/perfil_hint_data"
+                        android:inputType="number" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#000" />
+
+                <TableRow android:layout_gravity="left" >
+
+                    <TextView
+                        style="@style/fonte_perfil"
+                        android:text="@string/perfil_idade" />
+
+                    <TextView
+                        android:id="@+id/idade"
+                        style="@style/fonte_perfil"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#000" />
+
+                <TableRow android:layout_marginBottom="5dp" >
+
+                    <EditText
+                        android:id="@+id/perfil_obs"
+                        style="@style/fonte_editText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:layout_span="3"
+                        android:background="@drawable/editext"
+                        android:ellipsize="start"
+                        android:gravity="center"
+                        android:hint="@string/observacao"
+                        android:inputType="textMultiLine" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/fonte_perfil"
+                        android:text="@string/perfil_sexo" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/sexo_f"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/sexo_m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@id/bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/botao"
+            android:orientation="horizontal" >
+
+            <Button
+                style="@style/tema_botao"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="voltar"
+                android:text="@string/b_voltar" />
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cinza_claro" />
+
+            <Button
+                style="@style/tema_botao"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="tela3"
+                android:text="@string/b_avancar" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- SEGUNDA TELA -->
+    
+   <RelativeLayout android:id="@+id/perfil_tela2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gelo"
+        android:visibility="gone">  
+	   	<ScrollView android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_alignParentTop="true"
+	    	android:padding="5dp"
+	    	android:layout_above="@+id/bottom2">
+		    <LinearLayout android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical">
+			    <TextView android:text="@string/fator_cat"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        style="@style/fonte_perfil"
+			        android:layout_marginBottom="10dp"
+			        android:layout_marginLeft="10dp"/>
+		       	<RadioGroup android:id="@+id/radioGroup_fator"
+		       	    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+		       	    <RadioButton android:id="@+id/radioButton_cat1"
+		       	        android:text="@string/fator_cat_1"
+		       	        android:checked="true"/>
+		       	    <View android:layout_width="fill_parent" android:layout_height="0.8dp" android:background="#000" 
+			            android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+		       	    <RadioButton android:id="@+id/radioButton_cat2"
+		       	        android:text="@string/fator_cat_2"/>
+		       	    <View android:layout_width="fill_parent" android:layout_height="0.8dp" android:background="#000" 
+			            android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+		       	    <RadioButton android:id="@+id/radioButton_cat3"
+		       	        android:text="@string/fator_cat_3"/>
+		       	    <View android:layout_width="fill_parent" android:layout_height="0.8dp" android:background="#000" 
+			            android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+		       	    <RadioButton android:id="@+id/radioButton_cat4"
+		       	        android:text="@string/fator_cat_4"/>
+		       	    <View android:layout_width="fill_parent" android:layout_height="0.8dp" android:background="#000" 
+			            android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+		       	    <RadioButton android:id="@+id/radioButton_cat5"
+		       	        android:text="@string/fator_cat_5"/>
+		       	    <View android:layout_width="fill_parent" android:layout_height="0.8dp" android:background="#000" 
+			            android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+		       	    <RadioButton android:id="@+id/radioButton_cat6"
+		       	        android:text="@string/fator_cat_6"/>
+		       	</RadioGroup>	
+			</LinearLayout>       		       
+	   	</ScrollView>
+   		<LinearLayout android:id="@+id/bottom2"
+	        android:layout_alignParentBottom="true"
+	        android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+		    android:background="@drawable/botao"
+		    android:orientation="horizontal">				
+		    <Button style="@style/tema_botao" 
+		        android:layout_width="0dp"
+		        android:layout_weight="1"
+		        android:layout_height="40dp"
+		        android:text="@string/b_voltar" 
+				android:gravity="center"
+				android:onClick="tela1"/>	 
+			<View android:layout_width="0.6dp" 
+	            android:layout_height="fill_parent" 
+	            android:layout_marginTop="5dp"
+			    android:layout_marginBottom="5dp" 
+			    android:background="@color/cinza_claro"/>		
+		    <Button style="@style/tema_botao" 
+		        android:layout_width="0dp"
+		        android:layout_weight="1"
+		        android:layout_height="40dp"
+		        android:text="@string/b_avancar" 
+				android:gravity="center"
+				android:onClick="tela3"/>	
+		</LinearLayout>
+   </RelativeLayout>
+    
+
+
+    <!-- TERCEITA TELA -->
+
+    <RelativeLayout
+        android:id="@+id/perfil_tela3"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gelo"
+        android:visibility="gone" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom3"
+            android:layout_alignParentTop="true" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp" >
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:stretchColumns="0,1" >
+
+                        <TableRow
+                            android:gravity="center"
+                            android:minHeight="50dp" >
+
+                            <TextView
+                                style="@style/fonte_perfil"
+                                android:gravity="center"
+                                android:text="@string/fator_glic" />
+
+                            <EditText
+                                android:id="@+id/fator_glic_editText"
+                                style="@style/fonte_editText"
+                                android:layout_height="40dp"
+                                android:background="@drawable/editext"
+                                android:gravity="center"
+                                android:inputType="numberDecimal" />
+                        </TableRow>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.8dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#000" />
+
+                        <TableRow
+                            android:gravity="center"
+                            android:minHeight="50dp" >
+
+                            <TextView
+                                style="@style/fonte_perfil"
+                                android:gravity="center"
+                                android:text="@string/fator_carb" />
+
+                            <EditText
+                                android:id="@+id/fator_carb_editText"
+                                style="@style/fonte_editText"
+                                android:layout_height="40dp"
+                                android:background="@drawable/editext"
+                                android:gravity="center"
+                                android:inputType="numberDecimal" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#000" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fator_glic_titulo"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/fator_glic_info"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fator_carb_titulo"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fator_carb_info"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_marginRight="-2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/fundo_cinza_claro_bordas"
+                    android:orientation="vertical"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/atencao"
+                        android:textColor="#FF0000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/fator_info_atencao"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                     <Button
+                        style="@style/tema_botao_bordas"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:onClick="calcularFator"
+                        android:padding="5dp"
+                        android:text="@string/b_calcular_default" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <!-- botoes -->
+
+        <LinearLayout
+            android:id="@+id/bottom3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/botao"
+            android:orientation="horizontal" >
+
+            <Button
+                style="@style/tema_botao"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="tela1"
+                android:text="@string/b_voltar" />
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cinza_claro" />
+
+            <Button
+                style="@style/tema_botao"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="salvar"
+                android:text="@string/b_avancar" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

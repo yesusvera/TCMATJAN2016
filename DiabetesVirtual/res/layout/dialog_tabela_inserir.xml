@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/gelo">
+	<ScrollView android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_above="@+id/tabela_botoes">
+	    
+	    <LinearLayout android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+		<!-- DESC -->	 
+			<TableLayout android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:padding="10dp"
+				android:background="@color/gelo"
+				android:stretchColumns="1"
+				android:layout_gravity="center_horizontal">
+		<!-- DESCRICAO -->
+				<TableRow android:layout_gravity="left"
+					android:layout_marginTop="5dp">
+				    <EditText android:id="@+id/tabela_desc"
+				     android:paddingLeft="2dp"
+				     android:paddingRight="2dp"
+				     android:inputType="textCapWords"
+				     android:hint="@string/descricao"
+				     android:layout_height="40dp"
+				     android:layout_width="wrap_content"
+					 style="@style/fonte_editText"
+					 android:background="@drawable/editext"
+					 android:gravity="center"
+					 android:ellipsize="start"
+					 android:layout_span="2"/>
+				</TableRow >	        
+				
+				<View android:layout_width="fill_parent" 
+				    android:layout_height="0.8dp" 
+				    android:background="#000" 
+				    android:layout_marginTop="5dp" 
+				    android:layout_marginBottom="5dp"/>	 	        
+		<!-- MEDIDA -->		        
+				 <TableRow android:layout_gravity="left">
+				 	<TextView android:text="@string/medida"
+				    	style="@style/fonte_perfil"/>
+				    <EditText android:id="@+id/tabela_medida"
+				       	android:inputType="text"
+				       	android:layout_height="40dp"
+				       	android:layout_width="60dp"
+						style="@style/fonte_editText"
+						android:background="@drawable/editext"
+						android:gravity="center"
+						android:paddingLeft="2dp"
+						android:paddingRight="2dp"/>
+				</TableRow >
+				
+				<View android:layout_width="fill_parent" 
+				    android:layout_height="0.8dp" 
+				    android:background="#000" 
+				    android:layout_marginTop="5dp" 
+				    android:layout_marginBottom="5dp"/>	 	        
+		<!-- PESO -->		        
+				 <TableRow android:layout_gravity="left">
+				 	<TextView android:text="@string/peso_down_gramas"
+				    	style="@style/fonte_perfil"/>
+				    <EditText android:id="@+id/tabela_peso"
+				       	android:inputType="number"
+				       	android:layout_height="40dp"
+				       	android:layout_width="60dp"
+						style="@style/fonte_editText_perfil"
+						android:background="@drawable/editext"
+						android:gravity="center"/>
+				</TableRow >	
+				
+				 <View android:layout_width="fill_parent" 
+				    android:layout_height="0.8dp" 
+				    android:background="#000" 
+				    android:layout_marginTop="5dp" 
+				    android:layout_marginBottom="5dp"/>	 	        
+		<!-- CARB -->		        
+				 <TableRow android:layout_gravity="left">
+				 	<TextView android:text="@string/carb_down_gramas"
+				    	style="@style/fonte_perfil"
+				    	android:layout_marginRight="5dp"/>
+				    <EditText android:id="@+id/tabela_carb"
+				       	android:inputType="number"
+				       	android:layout_height="40dp"
+				       	android:layout_width="60dp"
+						style="@style/fonte_editText_perfil"
+						android:background="@drawable/editext"
+						android:gravity="center"/>
+				</TableRow >				      
+			</TableLayout>
+			
+		<!-- FAVORITOS -->	
+			<CheckBox android:id="@+id/tabela_chec_favorito"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:checked="false"
+				android:textSize="18sp"
+				android:textColor="@color/azul_escuro2"
+				android:layout_gravity="right"
+				android:layout_marginRight="10dp"
+				android:text="@string/tabela_favoritos"/>			
+				<TextView android:text="@string/fav_obs"
+				    	style="@style/fonte_perfil"
+				    	android:layout_width="fill_parent"
+				    	android:layout_height="wrap_content"
+				    	android:padding="10dp"/><!-- BOTÕES -->		    	
+	   	</LinearLayout>
+	</ScrollView> 
+	<LinearLayout android:id="@+id/tabela_botoes"
+	    		android:layout_alignParentBottom="true"
+	    		android:layout_marginTop="10dp"
+		        android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+				android:background="@drawable/botao"
+				android:orientation="horizontal">
+				<Button android:id="@+id/tabela_cancelar" 
+				    style="@style/tema_botao" 
+				    android:text="@string/b_cancelar"
+				    android:layout_height="50dp"
+				    android:layout_width="0dp"
+				    android:layout_weight="1"/>	
+				<View android:layout_width="0.6dp" 
+			            android:layout_height="fill_parent" 
+			            android:layout_marginTop="5dp"
+					    android:layout_marginBottom="5dp" 
+					    android:background="@color/cinza_claro"/> 
+			    <Button android:id="@+id/tabela_excluir"
+			        style="@style/tema_botao" 
+					android:text="@string/b_excluir"
+					android:layout_height="50dp"
+					android:layout_width="0dp"
+				    android:layout_weight="1"/>	
+				<View android:layout_width="0.6dp" 
+			            android:layout_height="fill_parent" 
+			            android:layout_marginTop="5dp"
+					    android:layout_marginBottom="5dp" 
+					    android:background="@color/cinza_claro"/> 
+			    <Button android:id="@+id/tabela_editar"
+			        style="@style/tema_botao" 
+					android:text="@string/b_salvar"
+					android:layout_height="50dp"
+					android:layout_width="0dp"
+				    android:layout_weight="1"/>			   
+	</LinearLayout>
+</RelativeLayout>

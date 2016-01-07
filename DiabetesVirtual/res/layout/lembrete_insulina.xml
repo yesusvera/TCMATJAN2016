@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/azul_fundo"
+    android:orientation="vertical">
+	<LinearLayout android:layout_width="fill_parent" 
+	    android:layout_height="40dp" 
+	    android:background="@drawable/topo">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/b_lembrete_basal"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout>        
+	<ScrollView android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_gravity="center">	
+	    
+<!-- LEMBRETE 01 -->	        
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:background="@color/cinza_claro">
+	        <TextView android:text="@string/lembrete1" 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:textSize="18sp"
+			    android:textColor="@color/azul_escuro2"
+			    android:gravity="center"
+				android:background="@color/branco"/>	
+		<View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+	        
+<!-- CHECKBOX ATIVAR LEMBTETE 01-->		 
+		    <LinearLayout android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:gravity="right"
+				    android:paddingRight="5dp">
+					<TextView android:text="@string/ativar"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:textSize="16sp"
+					    android:textColor="@color/azul_escuro2"/>
+					<CheckBox android:id="@+id/checkAtivo"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"/>
+		    </LinearLayout>		    	    
+		<View android:layout_width="fill_parent" android:layout_height="0.8dp" android:background="#000"/>
+		    
+		    <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="90dp"
+		        android:padding="5dp"
+		        android:orientation="horizontal">        
+		        <EditText android:id="@+id/insulina_lembrete"
+			 	    android:layout_width="0dp"
+			 	    android:layout_weight="1"
+				    android:layout_height="fill_parent"
+				    android:background="@drawable/editext" 
+				    android:inputType="numberDecimal" 
+				    style="@style/fonte_editText" 
+				    android:hint="@string/hint_medida_insulina"
+				    android:gravity="center" 
+				    android:ellipsize="start"
+				    android:layout_margin="5dp"/>    		   		    
+				<EditText android:id="@+id/obs_lembrete"
+				    android:singleLine="false"
+				    style="@style/fonte_editText"
+				    android:layout_height="fill_parent"
+				    android:layout_width="0dp"
+				    android:layout_weight="1"
+				    android:layout_margin="5dp"
+				    android:background="@drawable/editext"
+				    android:gravity="center"
+				    android:hint="@string/hint_Obs"
+				    android:inputType="textMultiLine|textCapSentences" 
+				    android:ellipsize="start"/>
+		    </LinearLayout>		    	     
+		    <View android:layout_width="fill_parent" android:layout_height="0.6dp" android:background="#000"/>
+
+<!-- TIMEPICKERRRRRR LEMBRETE 01-->		    
+		    <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:padding="5dp"
+		        android:orientation="horizontal">
+		        <TimePicker android:id="@+id/timePicker_insulina" 
+					android:layout_width="0dp" 
+					android:layout_height="wrap_content"
+					android:layout_weight="1"/>
+		        <LinearLayout android:layout_width="0dp" 
+		            android:layout_weight="1"
+				    android:layout_height="fill_parent"
+				    android:background="@drawable/fundo_branco_arredondado"
+				    android:layout_margin="5dp"
+				    android:padding="10dp">
+					<Button style="@style/tema_botao_inserir" 
+					    android:text="@string/b_salvar"
+					    android:layout_height="fill_parent"
+					    android:layout_width="fill_parent"
+					    android:onClick="salvar"/>	
+				</LinearLayout>  				
+		    </LinearLayout>
+		 	<View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		    
+ <!-- LEMBRETE 02 --> 
+	 		<LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:background="@color/gelo"
+		        android:layout_marginBottom="5dp"> 	    
+				<TextView android:text="@string/lembrete2" 
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:textSize="18sp"
+				    android:textColor="@color/azul_escuro2"
+				    android:gravity="center"
+					android:background="@color/branco"/>	
+				<View android:layout_width="fill_parent" android:layout_height="1dp" android:background="#000"/>
+		        
+	<!-- CHECKBOX ATIVAR LEMBTETE 02-->		 
+			    <LinearLayout android:layout_width="fill_parent"
+					    android:layout_height="wrap_content"
+					    android:orientation="horizontal"
+					    android:gravity="right"
+					    android:paddingRight="5dp">
+						<TextView android:text="@string/ativar"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:textSize="16sp"
+						    android:textColor="@color/azul_escuro2"/>
+						<CheckBox android:id="@+id/checkAtivo2"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"/>
+			    </LinearLayout>		    	    
+			<View android:layout_width="fill_parent" android:layout_height="0.8dp" android:background="#000"/>
+			    
+			    <LinearLayout android:layout_width="fill_parent"
+			        android:layout_height="90dp"
+			        android:padding="5dp"
+			        android:orientation="horizontal">        
+			        <EditText android:id="@+id/insulina_lembrete2"
+				 	    android:layout_width="0dp"
+				 	    android:layout_weight="1"
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/editext" 
+					    android:inputType="numberDecimal" 
+					    style="@style/fonte_editText" 
+					    android:hint="@string/hint_medida_insulina"
+					    android:gravity="center" 
+					    android:ellipsize="start"
+					    android:layout_margin="5dp"/>    		   		    
+					<EditText android:id="@+id/obs_lembrete2"
+					    android:singleLine="false"
+					    style="@style/fonte_editText"
+					    android:layout_height="fill_parent"
+					    android:layout_width="0dp"
+					    android:layout_weight="1"
+					    android:layout_margin="5dp"
+					    android:background="@drawable/editext"
+					    android:gravity="center"
+					    android:hint="@string/hint_Obs"
+					    android:inputType="textMultiLine|textCapSentences" 
+					    android:ellipsize="start"/>
+			    </LinearLayout>		    	     
+			    <View android:layout_width="fill_parent" android:layout_height="0.6dp" android:background="#000"/>
+	
+	<!-- TIMEPICKERRRRRR LEMBRETE 01-->		    
+			    <LinearLayout android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:padding="5dp"
+			        android:orientation="horizontal">
+			        <TimePicker android:id="@+id/timePicker_insulina2" 
+						android:layout_width="0dp" 
+						android:layout_height="wrap_content"
+						android:layout_weight="1"/>
+			        <LinearLayout android:layout_width="0dp" 
+			            android:layout_weight="1"
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/fundo_branco_arredondado"
+					    android:layout_margin="5dp"
+					    android:padding="10dp">
+						<Button style="@style/tema_botao_inserir" 
+						    android:text="@string/b_salvar"
+						    android:layout_height="fill_parent"
+						    android:layout_width="fill_parent"
+						    android:onClick="salvar2"/>	
+					</LinearLayout>  				
+		    	</LinearLayout>    
+			</LinearLayout>
+		</LinearLayout>  
+	</ScrollView>
+
+
+
+</LinearLayout>

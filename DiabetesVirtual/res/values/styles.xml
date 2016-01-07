@@ -1,0 +1,276 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+         <item name="android:textViewStyle">@style/fonte_do_app</item> 
+    </style>   
+    
+    
+<!-- TEMA CUSTOMIZADO DO DIALOGO -->	
+<style name="tema_dialogo" parent="android:style/Theme.Dialog">
+    <item name="android:windowTitleStyle">@style/titulo_dialogo</item>
+    <item name="android:windowBackground">@drawable/dialogo_borda</item>
+    <item name="android:windowIsFloating">true</item>     
+    <item name="android:textViewStyle">@style/fonte_do_dialog</item> 
+</style>
+<!-- TEMA CUSTOMIZADO DO TIULO DO DIALOGO -->	
+<style name="titulo_dialogo" parent="android:style/TextAppearance.DialogWindowTitle">
+    <item name="android:background">@drawable/dialog_titulo_borda</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:textColor">#fff</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center</item>
+</style>
+<!-- TEMA CUSTOMIZADO DO BOTAO (AZUL) -->	
+<style name="tema_botao" parent="android:style/Widget.Button">
+	<item name="android:background">@drawable/shapebutton</item>
+	<item name="android:textColor">#fff</item>	
+	<item name="android:textStyle">bold</item>
+	<item name="android:textSize">16sp</item>
+</style> 
+
+<!-- TEMA CUSTOMIZADO DO BOTAO (AZUL) COM BORDAS-->	
+<style name="tema_botao_bordas" parent="android:style/Widget.Button">
+	<item name="android:background">@drawable/shapebutton_bordas</item>
+	<item name="android:textColor">#fff</item>	
+	<item name="android:textStyle">bold</item>
+	<item name="android:textSize">16sp</item>
+</style> 
+
+<!-- TEMA CUSTOMIZADO DO BOTAO (LARANJA) -->	
+<style name="tema_botao_laranja" parent="android:style/Widget.Button">
+	<item name="android:background">@drawable/shapebutton_laranja</item>
+	<item name="android:textColor">#fff</item>	
+	<item name="android:textStyle">bold</item>
+	<item name="android:textSize">20sp</item>
+</style> 
+
+<!-- TEMA CUSTOMIZADO DO BOTAO (INSERIR) -->	
+<style name="tema_botao_inserir" parent="android:style/Widget.Button">
+	<item name="android:background">@drawable/shapebutton_inserir</item>
+	<item name="android:textColor">#fff</item>	
+	<item name="android:textStyle">bold</item>
+	<item name="android:textSize">22sp</item>
+</style> 
+<!-- TEMA CUSTOMIZADO DA FONTE DO TEXTVIEW DO APP -->
+<style name="fonte_do_app" parent="@android:style/TextAppearance">
+    <item name="android:textSize">12sp</item> 
+    <item name="android:textColor">#C1CDC1</item>
+    <item name="android:inputType">none</item>
+	<item name="android:textIsSelectable">false</item>   
+</style>
+<!-- TEMA CUSTOMIZADO DA FONTE DO RADIOGROUP DA REFEICAO -->
+<style name="fonte_do_radioGroup" parent="@android:style/TextAppearance">
+    <item name="android:textSize">14sp</item> 
+    <item name="android:textColor">#00008B</item>
+    <item name="android:inputType">none</item>
+	<item name="android:textIsSelectable">false</item>   
+</style>
+<!-- TEMA CUSTOMIZADO DA FONTE DOS DETALHES DOS EXERCICIOS (tITULOS -->
+<style name="fonte_detalhe_exe" parent="@android:style/TextAppearance">
+    <item name="android:textSize">18sp</item> 
+    <item name="android:textColor">#0000FF</item>
+    <item name="android:textStyle">bold</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DOS DETALHES DOS EXERCICIOS (VARIAVEIS) -->
+<style name="fonte_detalhe_exe_preto" parent="@android:style/TextAppearance">
+    <item name="android:textSize">16sp</item> 
+    <item name="android:textColor">#000</item>
+</style>
+<!-- TEMA CUSTOMIZADO DA FONTE DAS METAS NA MAIN TITULOS -->
+<style name="fonte_metas_main" parent="@android:style/TextAppearance">
+    <item name="android:textSize">20sp</item> 
+    <item name="android:textColor">#1C1C1C</item>
+    <item name="android:textStyle">bold</item>  
+</style>
+
+<!-- TEMA CUSTOMIZADO DA TELA LOADIND DAS METAS -->
+<style name="fonte_metas_load" parent="@android:style/TextAppearance">
+    <item name="android:textSize">22sp</item> 
+    <item name="android:textColor">#000</item>
+    <item name="android:textStyle">bold</item>  
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DAS METAS NA MAIN DADOS -->
+<style name="fonte_metas_dados" parent="@android:style/TextAppearance">
+    <item name="android:textSize">22sp</item> 
+    <item name="android:textColor">#1E90FF</item>	
+    <item name="android:textStyle">bold</item>  
+</style>
+
+
+<!-- TEMA CUSTOMIZADO DA FONTE DO TEXTVIEW DO DIALOG -->
+<style name="fonte_do_dialog" parent="@android:style/TextAppearance">
+    <item name="android:textSize">12sp</item> 
+    <item name="android:textColor">#000</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DOS DETALHES DA REF 1 -->
+<style name="fonte_do_det_ref1" parent="@android:style/TextAppearance">
+    <item name="android:textSize">14sp</item> 
+    <item name="android:textColor">@color/azul_escuro1</item>
+    <item name="android:textStyle">bold</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DOS DETALHES DA REF 2 -->
+<style name="fonte_do_det_ref2" parent="@android:style/TextAppearance">
+    <item name="android:textSize">14sp</item> 
+    <item name="android:textColor">@color/azul_escuro1</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DO TEXTVIEW DO DIALOG -->
+<style name="fonte_do_dialog_edit" parent="@android:style/TextAppearance">
+    <item name="android:textSize">12sp</item> 
+    <item name="android:textColor">#000</item>
+    <item name="android:textStyle">bold</item>
+</style>
+<!-- TEMA CUSTOMIZADO DA FONTE DA TELA INICIAL -->
+<style name="fonte_tela_inicial" paren="@android:style/TextAppearance">
+    <item name="android:textSize">12sp</item> 
+    <item name="android:textColor">#fff</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:gravity">center</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DOS TITULOS DO RELATORIO -->
+<style name="fonte_tela_relatorio" paren="@android:style/TextAppearance">
+    <item name="android:textSize">16sp</item> 
+    <item name="android:textColor">#000</item>
+    <item name="android:gravity">center</item>
+    <item name="android:padding">2dp</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DO TITULO DA TELA INICIAL -->
+<style name="fonte_titulo" paren="@android:style/TextAppearance">
+    <item name="android:textSize">18sp</item> 
+    <item name="android:textColor">#fff</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textStyle">bold</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DA TELA DA GLICEMIA -->
+<style name="fonte_tela_glicemia" paren="@android:style/TextAppearance">
+    <item name="android:textSize">18sp</item> 
+    <item name="android:textColor">#fff</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DA TELA DA GLICEMIA (RELATORIO) -->
+<style name="fonte_relatorio_glicemia" paren="@android:style/TextAppearance">
+    <item name="android:textSize">14sp</item> 
+    <item name="android:textColor">#fff</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DO EDIT TEXT DA GLICEMIA -->
+<style name="fonte_editText_glic" paren="@android:style/TextAppearance">
+    <item name="android:textSize">24sp</item> 
+    <item name="android:textColor">#000</item>
+    <item name="android:textStyle">bold</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DO EDIT TEXT DA GLICEMIA -->
+<style name="fonte_editText" paren="@android:style/TextAppearance">
+    <item name="android:textSize">14sp</item> 
+    <item name="android:textColor">#000</item>
+    <item name="android:textStyle">bold</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DO EDIT TEXT DA GLICEMIA -->
+<style name="fonte_editText_perfil" paren="@android:style/TextAppearance">
+    <item name="android:textSize">18sp</item> 
+    <item name="android:textColor">#000</item>
+    <item name="android:textStyle">bold</item>
+</style>
+
+
+
+<!-- TEMA CUSTOMIZADO DA FONTE DA HORA e DATA dos PICKES -->
+<style name="fonte_dataHora" paren="@android:style/TextAppearance">
+    <item name="android:textSize">14sp</item> 
+    <item name="android:textColor">#104BA9</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center</item>   
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DA HORA e DATA PRETA -->
+<style name="fonte_dataHora_preta" paren="@android:style/TextAppearance">
+    <item name="android:textSize">14sp</item> 
+    <item name="android:textColor">#000</item>
+    <item name="android:gravity">center</item>   
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DA HORA e DATA AZUL -->
+<style name="fonte_dataHora_azul" paren="@android:style/TextAppearance">
+    <item name="android:textSize">14sp</item> 
+    <item name="android:textColor">#0000FF</item>
+    <item name="android:gravity">center</item>   
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DA HORA e DATA dos PICKES -->
+<style name="fonte_perfil" paren="@android:style/TextAppearance">
+    <item name="android:textSize">16sp</item> 
+    <item name="android:textColor">#104BA9</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">left</item>   
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DAS INFO -->
+<style name="fonte_info" paren="@android:style/TextAppearance">
+    <item name="android:textSize">16sp</item> 
+    <item name="android:textColor">#104BA9</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:gravity">left</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DAS INFO CINZA -->
+<style name="fonte_info_cinza" paren="@android:style/TextAppearance">
+    <item name="android:textSize">16sp</item> 
+    <item name="android:textColor">@color/cinza_claro</item>
+    <item name="android:gravity">left</item>
+</style>
+
+
+<!-- TEMA CUSTOMIZADO DA FONTE DAS METAS TEXT -->
+<style name="fonte_metas" paren="@android:style/TextAppearance">
+    <item name="android:textSize">18sp</item> 
+    <item name="android:textColor">#0000FF</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">left</item>   
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DA TELA VARIACAI GLICEMICA -->
+<style name="fonte_variaca_glic" paren="@android:style/TextAppearance">
+    <item name="android:textSize">18sp</item> 
+    <item name="android:textColor">#fff</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:layout_marginRight">10dp</item> 
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DA TELA DO ADD ALIMENTO (OS TOTAIS - valores) -->
+<style name="fonte_totais" paren="@android:style/TextAppearance">
+    <item name="android:textSize">12sp</item> 
+    <item name="android:textColor">#FF0000</item>
+    <item name="android:textStyle">bold</item>
+</style>
+
+<!-- TEMA CUSTOMIZADO DA FONTE DA TELA DO ADD ALIMENTO (OS TOTAIS - titulos) -->
+<style name="fonte_totais2" paren="@android:style/TextAppearance">
+    <item name="android:textSize">12sp</item> 
+    <item name="android:textColor">#000</item>
+</style>
+
+
+</resources>
+

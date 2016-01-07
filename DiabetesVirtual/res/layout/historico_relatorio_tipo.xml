@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">    
+    <LinearLayout android:id="@+id/topo1"
+        android:layout_width="fill_parent" android:layout_height="40dp" 
+	    android:background="@drawable/topo"
+	    android:layout_alignParentTop="true">
+		<TextView android:layout_width="match_parent"
+		         android:layout_height="match_parent"
+		         android:text="@string/titulo_historico_tipo"
+		         style="@style/fonte_titulo"/>
+	</LinearLayout>
+	 
+	<HorizontalScrollView android:id="@+id/topo2"
+	    android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:background="@color/branco"
+		android:layout_below="@+id/topo1">
+		<LinearLayout android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="2dp"
+		    android:paddingRight="2dp">
+			<CheckBox android:id="@+id/hist_glic"
+				    android:text="@string/radio_glic"
+				    android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"/>
+			<CheckBox android:id="@+id/hist_ref"
+				    android:text="@string/radio_ref"
+				    android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"/>
+			<CheckBox android:id="@+id/hist_exe"
+				    android:text="@string/radio_exe"
+				    android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"/>
+			<CheckBox android:id="@+id/hist_insulina"
+				    android:text="@string/radio_insulina"
+				    android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"/>		
+		</LinearLayout>	            
+	</HorizontalScrollView>
+	
+	<View android:id="@+id/linha"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="1dp" 
+	    android:background="#000"
+	    android:layout_below="@+id/topo2"/>
+	
+	<ListView android:id="@+id/historico_lista_tipo"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:background="#fff"
+	    android:cacheColorHint="#fff"
+	    android:layout_below="@+id/linha"
+	    android:layout_above="@+id/bottom"/>    
+	    
+	<LinearLayout android:id="@+id/bottom"
+	   android:background="@drawable/botao"
+         android:orientation="horizontal"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true">            
+         <Button android:text="@string/b_voltar"
+            android:layout_height="40dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/tema_botao"
+            android:onClick="voltar"/>  
+         <View android:layout_width="0.6dp" 
+            android:layout_height="fill_parent" 
+            android:layout_marginTop="5dp"
+		    android:layout_marginBottom="5dp" 
+		    android:background="@color/cinza_claro"/>
+	    <Button style="@style/tema_botao" 
+			android:text="@string/b_gerar_hist"
+			android:layout_height="40dp"
+			android:layout_width="0dp"
+            android:layout_weight="1"
+			android:onClick="gerar"/>	
+   	</LinearLayout>
+</RelativeLayout>

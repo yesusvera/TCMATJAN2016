@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/gelo"> 
+	<ScrollView android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_alignParentTop="true"
+	     android:layout_above="@+id/bottom_dialog">  	    
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">        
+<!-- INFO 1 EDITEXT SUGESTAO-->
+	        <LinearLayout android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="5dp"
+		        android:orientation="vertical">   
+		        <LinearLayout android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:orientation="vertical">
+			        <TextView android:text="@string/sug_insulina_info1"
+			            android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+			            android:textColor="@color/azul_escuro2"
+			            android:textStyle="bold"
+			            android:textSize="14sp"/>
+			        <View android:layout_width="fill_parent"
+			            android:layout_height="0.8dp"
+			            android:background="@color/azul_escuro2"/>
+			        
+			        <LinearLayout android:layout_marginTop="10dp"
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:padding="5dp"
+			            android:background="@drawable/fundo_cinca_bordas"
+			            android:gravity="center">
+				         <EditText  android:id="@+id/sug_insulina_info1"
+				            android:inputType="number"
+				            android:layout_width="100dp"
+							android:layout_height="40dp"
+							android:textSize="18sp"		         	   
+				         	android:gravity="center"
+				         	android:layout_gravity="center_horizontal"
+				         	android:background="@drawable/editext"/>  
+			         </LinearLayout>
+		        </LinearLayout>
+	<!-- INFO QTD INSULINA EDITEXT SUGESTAO-->
+		        <LinearLayout android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:orientation="vertical"
+		        	android:layout_marginTop="5dp">
+			        <TextView android:text="@string/sug_insulina_info_qtd"
+			            android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+			            android:textColor="#000"
+			            android:textSize="14sp"/>
+			         <LinearLayout android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:padding="5dp"
+			            android:layout_marginTop="5dp"
+			            android:background="@drawable/fundo_cinca_bordas"
+			            android:gravity="center"
+			            android:orientation="horizontal">
+				        <EditText android:id="@+id/sug_insulina_info_qtd"
+				            android:inputType="numberDecimal"
+				            android:layout_width="100dp"
+							android:layout_height="40dp"
+							android:textSize="18sp"		         	   
+				         	android:gravity="center"
+				         	android:layout_gravity="center_horizontal"
+				         	android:background="@drawable/editext"
+				         	android:layout_marginRight="10dp"/>
+				        <Button android:id="@+id/ins_b_recalcular"
+						    style="@style/tema_botao" 
+						    android:text="@string/b_recalcular"
+						    android:layout_height="fill_parent"
+						    android:padding="5dp"
+						    android:layout_width="wrap_content"/>	
+				      </LinearLayout> 
+		        </LinearLayout>
+	<!-- INFO 2 -->
+		        <LinearLayout android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:orientation="vertical"
+		        	android:layout_marginTop="5dp">
+			        <TextView android:text="@string/sug_insulina_info2"
+			            android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+			            android:textColor="#000"
+			            android:textSize="14sp"/>
+			        <TextView android:id="@+id/sug_insulina_info2"
+			            android:layout_width="fill_parent"
+		        		android:layout_height="wrap_content"
+			            android:textColor="@color/azul_escuro1"
+			            android:textSize="16sp"
+			            android:textStyle="bold"
+			            android:gravity="center"/>
+		        </LinearLayout>
+	<!-- INFO 3 -->
+		        <LinearLayout android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:orientation="vertical">
+			        <TextView android:text="@string/sug_insulina_info3"
+			            android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+			            android:textColor="#000"
+			            android:textSize="14sp"/>
+			        <TextView android:id="@+id/sug_insulina_info3"
+			            android:layout_width="fill_parent"
+		        		android:layout_height="wrap_content"
+			            android:textColor="@color/azul_escuro1"
+			            android:textSize="16sp"
+			            android:textStyle="bold"
+			            android:gravity="center"/>
+		        </LinearLayout>
+	<!-- INFO 4 -->
+		        <LinearLayout android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:orientation="vertical">
+			        <TextView android:text="@string/sug_insulina_info4"
+			            android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+			            android:textColor="#000"
+			            android:textSize="14sp"/>
+			        <TextView android:id="@+id/sug_insulina_info4"
+			            android:layout_width="fill_parent"
+		        		android:layout_height="wrap_content"
+			            android:textColor="@color/azul_escuro1"
+			            android:textSize="16sp"
+			            android:textStyle="bold"
+			            android:gravity="center"/>
+		        </LinearLayout>
+	<!-- INFO 5 -->
+		        <LinearLayout android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:orientation="vertical">
+			        <TextView android:text="@string/sug_insulina_info5"
+			            android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+			            android:textColor="#000"
+			            android:textSize="14sp"/>
+			        <TextView android:id="@+id/sug_insulina_info5"
+			            android:layout_width="fill_parent"
+		        		android:layout_height="wrap_content"
+			            android:textColor="@color/azul_escuro1"
+			            android:textSize="16sp"
+			            android:textStyle="bold"
+			            android:gravity="center"/>
+		        </LinearLayout>
+		     </LinearLayout>   
+<!-- INFO 6 -->
+	        <LinearLayout android:layout_width="fill_parent"
+	        	android:layout_height="wrap_content"
+	        	android:orientation="vertical"
+	        	android:layout_marginTop="10dp"
+	        	android:layout_marginLeft="-2dp"
+	        	android:layout_marginRight="-2dp"
+	        	android:background="@drawable/fundo_cinza_claro_bordas"
+	        	android:padding="5dp">
+		        <TextView android:text="@string/atencao"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+		            android:textColor="@color/vermelho"
+		            android:textSize="14sp"
+		            android:gravity="center"
+		            android:textStyle="bold"/>
+		        <TextView android:text="@string/sug_insulina_info6"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		android:textColor="#000"
+		            android:textSize="14sp"
+		            android:textStyle="normal"
+		            android:gravity="center"/>
+	        </LinearLayout>
+	    </LinearLayout>
+    </ScrollView>
+	
+	<LinearLayout android:id="@+id/bottom_dialog"
+	    android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:background="@drawable/botao"
+		android:orientation="horizontal"
+		android:layout_alignParentBottom="true">	
+		<Button android:id="@+id/ins_b_cancel"
+		    style="@style/tema_botao" 
+		    android:text="@string/b_cancelar"
+		    android:layout_height="50dp"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"/>	
+		<View android:layout_width="0.6dp" 
+	            android:layout_height="fill_parent" 
+	            android:layout_marginTop="5dp"
+			    android:layout_marginBottom="5dp" 
+			    android:background="@color/cinza_claro"/>	
+		<Button android:id="@+id/ins_b_insere"
+		    style="@style/tema_botao" 
+		    android:text="@string/b_inserir_dow"
+		    android:layout_height="50dp"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"/>	
+		<View android:layout_width="0.6dp" 
+	            android:layout_height="fill_parent" 
+	            android:layout_marginTop="5dp"
+			    android:layout_marginBottom="5dp" 
+			    android:background="@color/cinza_claro"/>	
+		<Button android:id="@+id/ins_b_lembrar"
+		    style="@style/tema_botao" 
+		    android:text="@string/b_lembrete"
+		    android:layout_height="50dp"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"/>	
+	</LinearLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000">   
+	
+    
+    <LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical">
+
+	    <LinearLayout android:id="@+id/grafico_glic" 
+		    android:layout_width="fill_parent"
+		    android:layout_height="300dp"
+		    android:orientation="vertical"
+		    android:background="#000"/>
+   
+	    <LinearLayout android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+            
+	        <View android:layout_width="30dp" android:layout_height="10dp"
+	            android:background="#FFA500" android:layout_marginRight="2dp"/>
+	       	<TextView 
+	          android:layout_width="wrap_content" 
+	          android:layout_height="wrap_content"  
+	          android:text="@string/glicemia" 
+	          android:textColor="#FFA500"
+	          android:layout_marginRight="30dp"/>
+	        
+            <View android:layout_width="30dp" android:layout_height="10dp" 
+            	android:background="#CDC9C9" android:layout_marginRight="2dp"/>
+	       	<TextView 
+	          android:layout_width="wrap_content" 
+	          android:layout_height="wrap_content"  
+	          android:text="@string/data_hora" 
+	          android:textColor="#CDC9C9"/>
+        </LinearLayout>
+	    
+    </LinearLayout>
+</ScrollView>
+
+
