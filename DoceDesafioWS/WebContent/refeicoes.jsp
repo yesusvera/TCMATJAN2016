@@ -1,3 +1,4 @@
+<%@page import="br.com.doce.desafio.visual.framework.Convert"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.com.docedesafio.model.Refeicao"%>
 <%@page import="java.util.List"%>
@@ -95,7 +96,7 @@
 				<td><%=refeicao.getObservacao()%></td>
 				<td><%=refeicao.getPeso()%></td>
 				<td><%=refeicao.getCarboidrato()%></td>
-				<td><%=refeicao.getData()%></td>
+				<td><%=Convert.getDtFormatada(refeicao.getData())%></td>
 				<%-- <td><a
 					href="refeicoes.jsp?acao=excluir&amp;codigo=<%=refeicao.getId()%>">
 						<img height="20px" width="20px" src="img/delete_icon.png"></img>

@@ -1,3 +1,4 @@
+<%@page import="br.com.doce.desafio.visual.framework.Convert"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="br.com.docedesafio.dao.InsulinaDAO"%>
@@ -89,7 +90,7 @@
 				<td><%=insulina.getTipo()%></td>
 				<td><%=insulina.getQuantidade()%></td>
 				<td><%=insulina.getObservacao()%></td>
-				<td><%=insulina.getData()%></td>
+				<td><%=Convert.getDtFormatada(insulina.getData())%></td>
 				<%-- <td><a
 					href="insulinas.jsp?acao=excluir&amp;codigo=<%=insulina.getId()%>">
 						<img height="20px" width="20px" src="img/delete_icon.png"></img>

@@ -1,3 +1,4 @@
+<%@page import="br.com.doce.desafio.visual.framework.Convert"%>
 <%@page import="br.com.docedesafio.model.Exercicio"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
@@ -99,7 +100,7 @@
 				<td><%=exercicio.getModalidade()%></td>
 				<td><%=exercicio.getIntensidade()%></td>
 				<td><%=exercicio.getDuracao()%></td>
-				<td><%=exercicio.getData()%></td>
+				<td><%=Convert.getDtFormatada(exercicio.getData())%></td>
 				<%-- <td><a
 					href="exercicios.jsp?acao=excluir&amp;codigo=<%=exercicio.getId()%>">
 						<img height="20px" width="20px" src="img/delete_icon.png"></img>

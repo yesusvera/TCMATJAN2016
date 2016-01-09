@@ -1,3 +1,4 @@
+<%@page import="br.com.doce.desafio.visual.framework.Convert"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.com.docedesafio.model.Glicemia"%>
 <%@page import="java.util.List"%>
@@ -73,7 +74,7 @@
 				<td><%=glicemia.getNomeUsuario()%></td>
 				<% } %>
 				<td><%=glicemia.getTipo()%></td>
-				<td><%=glicemia.getData()%></td>
+				<td><%=Convert.getDtFormatada(glicemia.getData())%></td>
 				<td><%=glicemia.getMedida()%></td>
 				<td><%=glicemia.getObservacao()%></td>
 				<%-- <td><a
